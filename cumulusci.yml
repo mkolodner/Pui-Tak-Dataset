@@ -23,3 +23,21 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+flows:
+    ptc_cleandataset:
+        description: Loads the sample dataset with additional options. WARNING--deletes all data in most objects first!
+        steps:
+            1:
+                task: delete_data 
+                options: 
+                    objects: Campaign,Opportunity,Contact,Account,npe03__Recurring_Donation__c,npsp__Address__c,Lead
+            2: 
+                task: disable_tdtm_trigger_handlers
+                options:
+                    namespace: 'npsp'
+            3:
+                task: load_dataset
+            4: 
+                task: restore_tdtm_trigger_handlers
+                options:
+                    namespace: 'npsp'

@@ -1,45 +1,1615 @@
-Insert Accounts:
-    sf_object: Account
-    table: Account
-    fields:
-        Name: Name
-        Description: Description
-        BillingStreet: BillingStreet
-        BillingCity: BillingCity
-        BillingState: BillingState
-        BillingPostalCode: BillingPostalCode
-        BillingCountry: BillingCountry
-        ShippingStreet: ShippingStreet
-        ShippingCity: ShippingCity
-        ShippingState: ShippingState
-        ShippingPostalCode: ShippingPostalCode
-        ShippingCountry: ShippingCountry
-        Phone: Phone
-        Fax: Fax
-        Website: Website
-        NumberOfEmployees: NumberOfEmployees
-        AccountNumber: AccountNumber
-        Site: Site
-        Type: Type
-Insert Contacts:
-    sf_object: Contact
-    table: Contact
-    fields:
-        Salutation: Salutation
-        FirstName: FirstName
-        LastName: LastName
-        Email: Email
-        Phone: Phone
-        MobilePhone: MobilePhone
-        OtherPhone: OtherPhone
-        HomePhone: HomePhone
-        Title: Title
-        Birthdate: Birthdate
-        MailingStreet: MailingStreet
-        MailingCity: MailingCity
-        MailingState: MailingState
-        MailingPostalCode: MailingPostalCode
-        MailingCountry: MailingCountry
-    lookups:
-        AccountId:
-            table: Account
+Insert Campaign:
+  sf_object: Campaign
+  fields:
+  - GW_Volunteers__Volunteer_Website_Time_Zone__c
+  - IsActive
+  - Name
+  - RecordTypeId
+  lookups:
+    ParentId:
+      table:
+      - Campaign
+      after: Insert Campaign
+Insert Department__c:
+  sf_object: Department__c
+  fields:
+  - Name
+Insert Deposit__c:
+  sf_object: Deposit__c
+  fields:
+  - Name
+Insert Fiscal_Year__c:
+  sf_object: Fiscal_Year__c
+  fields:
+  - Name
+Insert Group__c:
+  sf_object: Group__c
+  fields:
+  - End_Date__c
+  - Name
+  - Notes__c
+  - Start_Date__c
+Insert Poverty_Level__c:
+  sf_object: Poverty_Level__c
+Insert Report_Batch__c:
+  sf_object: Report_Batch__c
+  fields:
+  - Name
+Insert Route__c:
+  sf_object: Route__c
+  fields:
+  - Name
+Insert Service_Cost__c:
+  sf_object: Service_Cost__c
+  fields:
+  - Name
+Insert Stop_Status__c:
+  sf_object: Stop_Status__c
+  fields:
+  - Name
+Insert Time_Period__c:
+  sf_object: Time_Period__c
+  fields:
+  - Name
+Insert Vehicle__c:
+  sf_object: Vehicle__c
+  fields:
+  - Name
+Insert pmdm__Program__c:
+  sf_object: pmdm__Program__c
+  fields:
+  - Name
+  - Pui_Tak_ID__c
+  - pmdm__Description__c
+  - pmdm__EndDate__c
+  - pmdm__ProgramIssueArea__c
+  - pmdm__ShortSummary__c
+  - pmdm__StartDate__c
+  - pmdm__Status__c
+  - pmdm__TargetPopulation__c
+Insert GW_Volunteers__Volunteer_Job__c:
+  sf_object: GW_Volunteers__Volunteer_Job__c
+  fields:
+  - GW_Volunteers__Description__c
+  - GW_Volunteers__Display_on_Website__c
+  - GW_Volunteers__Inactive__c
+  - GW_Volunteers__Location_City__c
+  - GW_Volunteers__Location_Information__c
+  - GW_Volunteers__Location_Street__c
+  - GW_Volunteers__Location_Zip_Postal_Code__c
+  - GW_Volunteers__Location__c
+  - GW_Volunteers__Ongoing__c
+  - GW_Volunteers__Skills_Needed__c
+  - GW_Volunteers__Volunteer_Website_Time_Zone__c
+  - Name
+  - Program_volunteer__c
+  lookups:
+    GW_Volunteers__Campaign__c:
+      table:
+      - Campaign
+Insert Program__c:
+  sf_object: Program__c
+  fields:
+  - Name
+  lookups:
+    Department_del__c:
+      table:
+      - Department__c
+Insert pmdm__ProgramCohort__c:
+  sf_object: pmdm__ProgramCohort__c
+  fields:
+  - Name
+  - pmdm__Description__c
+  - pmdm__EndDate__c
+  - pmdm__StartDate__c
+  - pmdm__Status__c
+  lookups:
+    pmdm__Program__c:
+      table:
+      - pmdm__Program__c
+Insert pmdm__Service__c:
+  sf_object: pmdm__Service__c
+  fields:
+  - Name
+  - Service_Date__c
+  - Service_Title__c
+  - Service_Type__c
+  - pmdm__Description__c
+  - pmdm__Status__c
+  - pmdm__UnitOfMeasurement__c
+  lookups:
+    pmdm__Program__c:
+      table:
+      - pmdm__Program__c
+Insert Lead:
+  sf_object: Lead
+  fields:
+  - Company
+  - FirstName
+  - GW_Volunteers__Volunteer_Availability__c
+  - GW_Volunteers__Volunteer_Notes__c
+  - GW_Volunteers__Volunteer_Skills__c
+  - GW_Volunteers__Volunteer_Status__c
+  - IsConverted
+  - IsUnreadByOwner
+  - LastName
+  - MALatitude__c
+  - MALongitude__c
+  - Status
+  - npe01__Preferred_Email__c
+  - npe01__Preferred_Phone__c
+Insert Account:
+  sf_object: Account
+  fields:
+  - Church_Affiliation_of_Account__c
+  - Detailed_AMI__c
+  - Detailed_FPL__c
+  - Last_Attendance_Date__c
+  - Legacy_Household_ID__c
+  - MALatitude__c
+  - MALongitude__c
+  - Name
+  - RecordTypeId
+  - Self_Reported_AMI__c
+  - Self_Reported_FPL__c
+  - Self_Reported_Income__c
+  - Self_Reported_Number_in_HH__c
+  - Total_Gifts_Five_Years_Ago__c
+  - Total_Gifts_Four_Years_Ago__c
+  - Total_Gifts_Three_Years_Ago__c
+  - Total_Indirect_Gifts_2011__c
+  - Total_Indirect_Gifts_2012__c
+  - Total_Indirect_Gifts_2013__c
+  - Total_Indirect_Gifts_2014__c
+  - caseman__MaximumClientsServed__c
+  - npe01__SYSTEMIsIndividual__c
+  - npe01__SYSTEM_AccountType__c
+  - npo02__AverageAmount__c
+  - npo02__Best_Gift_Year_Total__c
+  - npo02__Best_Gift_Year__c
+  - npo02__FirstCloseDate__c
+  - npo02__Formal_Greeting__c
+  - npo02__HouseholdPhone__c
+  - npo02__Informal_Greeting__c
+  - npo02__LargestAmount__c
+  - npo02__LastCloseDate__c
+  - npo02__LastMembershipAmount__c
+  - npo02__LastMembershipDate__c
+  - npo02__LastMembershipLevel__c
+  - npo02__LastMembershipOrigin__c
+  - npo02__LastOppAmount__c
+  - npo02__MembershipEndDate__c
+  - npo02__MembershipJoinDate__c
+  - npo02__NumberOfClosedOpps__c
+  - npo02__NumberOfMembershipOpps__c
+  - npo02__OppAmount2YearsAgo__c
+  - npo02__OppAmountLastNDays__c
+  - npo02__OppAmountLastYear__c
+  - npo02__OppAmountThisYear__c
+  - npo02__OppsClosed2YearsAgo__c
+  - npo02__OppsClosedLastNDays__c
+  - npo02__OppsClosedLastYear__c
+  - npo02__OppsClosedThisYear__c
+  - npo02__SYSTEM_CUSTOM_NAMING__c
+  - npo02__SmallestAmount__c
+  - npo02__TotalMembershipOppAmount__c
+  - npo02__TotalOppAmount__c
+  - npsp__Funding_Focus__c
+  - npsp__Grantmaker__c
+  - npsp__Number_of_Household_Members__c
+  - npsp__Undeliverable_Address__c
+  lookups:
+    ParentId:
+      table:
+      - Account
+      after: Insert Account
+    npe01__One2OneContact__c:
+      table:
+      - Contact
+      after: Insert Contact
+Insert Enrollment_Summary__c:
+  sf_object: Enrollment_Summary__c
+  fields:
+  - Check_Date__c
+  - Check_Number__c
+  - Name
+  - Payment_Date__c
+  - Payment_Type__c
+  - Total_Refunds_for_All_EnrollmentsTrg__c
+  - Total_for_All_EnrollmentsTrg__c
+  lookups:
+    Account__c:
+      table:
+      - Account
+    Fee_Deposit__c:
+      table:
+      - Deposit__c
+Insert npsp__Address__c:
+  sf_object: npsp__Address__c
+  fields:
+  - npsp__API_Response__c
+  - npsp__Address_Type__c
+  - npsp__Administrative_Area__c
+  - npsp__Ambiguous__c
+  - npsp__Congressional_District__c
+  - npsp__County_Name__c
+  - npsp__Default_Address__c
+  - npsp__Latest_End_Date__c
+  - npsp__Latest_Start_Date__c
+  - npsp__MailingCity__c
+  - npsp__MailingCountry__c
+  - npsp__MailingPostalCode__c
+  - npsp__MailingState__c
+  - npsp__MailingStreet2__c
+  - npsp__MailingStreet__c
+  - npsp__Seasonal_End_Day__c
+  - npsp__Seasonal_End_Month__c
+  - npsp__Seasonal_Start_Day__c
+  - npsp__Seasonal_Start_Month__c
+  - npsp__Undeliverable__c
+  - npsp__Verification_Status__c
+  - npsp__Verified__c
+  lookups:
+    npsp__Household_Account__c:
+      table:
+      - Account
+Insert Authorization__c:
+  sf_object: Authorization__c
+  fields:
+  - Authorization_Number__c
+  - Authorization_Status__c
+  - Authorized_Units__c
+  - Auto_Renew_Until_Date__c
+  - CCU__c
+  - Case_Manager_Email__c
+  - Case_Manager_Phone__c
+  - Case_Manager__c
+  - Client_Member_I_D__c
+  - Cost_Per_Unit__c
+  - DON_Score__c
+  - Diagnosis__c
+  - End_Date__c
+  - Frequency_Authorized_Units__c
+  - Frequency__c
+  - Lost_Units__c
+  - MCO_Contact__c
+  - MCO_Member_ID__c
+  - MCO__c
+  - MMSE_Score__c
+  - Medicare_Recipient__c
+  - Name
+  - Notes__c
+  - Reassessment_Date__c
+  - Service_Description__c
+  - Spend_Rate__c
+  - Start_Date__c
+  - Unit_Type__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Funding_Source_Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Funding_Source__c:
+      table:
+      - Account
+    Program_Engagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+      after: Insert pmdm__ProgramEngagement__c
+    Service_Cost__c:
+      table:
+      - Service_Cost__c
+Insert Billing_Entry__c:
+  sf_object: Billing_Entry__c
+  fields:
+  - AM_Transportation__c
+  - Activities_Socialization__c
+  - Actual_End__c
+  - Actual_Start__c
+  - Approval_Timestamp__c
+  - Approved__c
+  - Assist_In_Out_of_Tub__c
+  - Assist_in_daily_exercise__c
+  - Assist_to_Dial__c
+  - Assist_to_Get_Up__c
+  - Assist_with_Dressing__c
+  - Auto_Created__c
+  - Billed__c
+  - Billing_Override_Reason__c
+  - Billing_Override__c
+  - Bowel_Incontinence__c
+  - Breakfast_Amount__c
+  - Breakfast_Consumed__c
+  - Breakfast__c
+  - Clean_Oven_kitchen__c
+  - Clinic__c
+  - Comb_Hair__c
+  - Cut_Food_Feed__c
+  - Date__c
+  - Disposing_Trash__c
+  - Double_Incontinence__c
+  - Dress__c
+  - End_Datetime__c
+  - End_Variance__c
+  - Groceries__c
+  - Hand_Wash__c
+  - Homemaker_Group__c
+  - Internal_Notes__c
+  - Location__c
+  - Lunch_Amount__c
+  - Lunch_Consumed__c
+  - Lunch__c
+  - Machine_Wash__c
+  - Making_or_changing_beds__c
+  - Meal_Reimbursement__c
+  - Meal_Type__c
+  - Miles__c
+  - Minutes_Worked__c
+  - Missed_Visit__c
+  - Mop_floor_Clean_Bath__c
+  - Non_Billable__c
+  - Notes__c
+  - Other_Reason_for_Non_Attendance__c
+  - Other_Reason_for_Variance__c
+  - PM_Transportation__c
+  - Pay_Bills__c
+  - Pharmacy__c
+  - Predicted_End__c
+  - Predicted_Start__c
+  - Prep_Serve_Breakfast__c
+  - Prep_Serve_Dinner__c
+  - Prep_Serve_Lunch__c
+  - Preparation__c
+  - Prevent_Duplicate__c
+  - Reason_for_Non_Attendance__c
+  - Reason_for_Variance__c
+  - RecordTypeId
+  - Remind_taking_medications__c
+  - Scheduling_Note__c
+  - Service_Type__c
+  - Shampoo__c
+  - Shopping_or_leisure_walk__c
+  - Shower__c
+  - Signature_Attached__c
+  - Signature_Override__c
+  - Snack_Amount__c
+  - Snack_Consumed__c
+  - Snack__c
+  - Special_Diets__c
+  - Special_Pay_Rate__c
+  - Sponge_Bath__c
+  - Start_Datetime__c
+  - Start_Variance__c
+  - Status__c
+  - Supervise_Encourage__c
+  - Supervision__c
+  - Sweep_or_Vacuum__c
+  - Telephone_Call__c
+  - Tub_Bath__c
+  - Unbilled_Type__c
+  - Unit_Type__c
+  - Urinary_Incontinence__c
+  - Wage_Rate__c
+  - Walk_with_Aid__c
+  - Write_Checks__c
+  lookups:
+    AM_Route__c:
+      table:
+      - Route__c
+    Authorization__c:
+      table:
+      - Authorization__c
+    Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Master_Schedule__c:
+      table:
+      - Master_Schedule__c
+      after: Insert Master_Schedule__c
+    PM_Route__c:
+      table:
+      - Route__c
+    Program_Engagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+      after: Insert pmdm__ProgramEngagement__c
+    Trans_Authorization__c:
+      table:
+      - Authorization__c
+Insert Birdseye_Event__c:
+  sf_object: Birdseye_Event__c
+  fields:
+  - Came_to_Office__c
+  - Date__c
+  - End_Time__c
+  - Flyers_Distributed__c
+  - Intakes__c
+  - Location__c
+  - Max_Attendance__c
+  - Min_Attendance__c
+  - Name
+  - Notes__c
+  - Number_Attended__c
+  - Recruitment_Efforts__c
+  - Start_Time__c
+  - Total_Attended__c
+  - Type__c
+  lookups:
+    Community_Partner__c:
+      table:
+      - Account
+    External_Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Program__c:
+      table:
+      - pmdm__Program__c
+Insert Case:
+  sf_object: Case
+  fields:
+  - Assessment_Barrier__c
+  - Case_Age_In_Business_Hours__c
+  - Case_Closed_Date__c
+  - Case_Open_Date__c
+  - Case_Outcome__c
+  - Case_Worker__c
+  - Charity_Tracker_Assistance__c
+  - First_Case_in_FY__c
+  - IsEscalated
+  - Last_Status_Change__c
+  - Number_in_Household__c
+  - RecordTypeId
+  - Service_Requested_CM__c
+  - Service_Requested__c
+  - Time_Used_on_Case__c
+  - Time_With_Customer__c
+  - Time_With_Support__c
+  - Type_Sub_Category__c
+  - caseman__IncidentDateTime__c
+  - caseman__IncidentType__c
+  - caseman__LocationNotes__c
+  - caseman__ReferralResult__c
+  - caseman__Severity__c
+  lookups:
+    AccountId:
+      table:
+      - Account
+    ContactId:
+      table:
+      - Contact
+      after: Insert Contact
+    ParentId:
+      table:
+      - Case
+      after: Insert Case
+    Service_Delivery_del__c:
+      table:
+      - pmdm__ServiceDelivery__c
+      after: Insert pmdm__ServiceDelivery__c
+    caseman__Branch__c:
+      table:
+      - Account
+    caseman__Intake__c:
+      table:
+      - caseman__Intake__c
+      after: Insert caseman__Intake__c
+    caseman__Program__c:
+      table:
+      - pmdm__Program__c
+    caseman__ReferralOrganizationContact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    caseman__ReferralOrganization__c:
+      table:
+      - Account
+Insert Case_Followup__c:
+  sf_object: Case_Followup__c
+  fields:
+  - Case_Followup_Date__c
+  - Case_Followup_Notes__c
+  - Case_Followup_Status__c
+  - Name
+  lookups:
+    Case__c:
+      table:
+      - Case
+Insert Class_Session__c:
+  sf_object: Class_Session__c
+  fields:
+  - Date__c
+  - Notes__c
+  - Status__c
+  lookups:
+    Class__c:
+      table:
+      - Class__c
+      after: Insert Class__c
+    Facilitator__c:
+      table:
+      - Contact
+      after: Insert Contact
+Insert Class__c:
+  sf_object: Class__c
+  fields:
+  - Auto_Create_Attendance__c
+  - Class_Section__c
+  - Class_Type__c
+  - Description__c
+  - End_Date__c
+  - End_Time__c
+  - Facility_Location__c
+  - Facility_Room__c
+  - Friday__c
+  - Legacy_Section__c
+  - Location__c
+  - Maximum_Enrollment__c
+  - Minimum_Enrollment__c
+  - Monday__c
+  - Name
+  - Other_Facilitator__c
+  - Program_Fee__c
+  - Pui_Tak_Class_ID__c
+  - Saturday__c
+  - Sponsoring_Location__c
+  - Start_Date__c
+  - Start_Time__c
+  - Status__c
+  - Sunday__c
+  - Thursday__c
+  - Tuesday__c
+  - Waitlist__c
+  - Wednesday__c
+  lookups:
+    Class_Old__c:
+      table:
+      - SFDC_Class__c
+      after: Insert SFDC_Class__c
+    Fiscal_Year__c:
+      table:
+      - Fiscal_Year__c
+    Instructor__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Program__c:
+      table:
+      - Program__c
+    Programm__c:
+      table:
+      - pmdm__Program__c
+    Time_Period__c:
+      table:
+      - Time_Period__c
+Insert Class_Roster__c:
+  sf_object: Class_Roster__c
+  fields:
+  - Allergen_Online_instructor__c
+  - Allergen_Online_self__c
+  - CPDH_Manager_License__c
+  - End_Date__c
+  - Enrollment_Notes__c
+  - Exit_Reason__c
+  - Fee_Class_Text__c
+  - Fee_Discount_Reason__c
+  - Fee_Discount__c
+  - Fee_Other__c
+  - Food_Handler_Online_instructor__c
+  - Food_Handler_Online_self__c
+  - Grade_in_School__c
+  - Initial_Registration__c
+  - Manager_Book_buy__c
+  - Manager_Book_loan__c
+  - Manager_Class__c
+  - Manager_Exam_only__c
+  - Manager_Re_Test__c
+  - Manager_Replacement_License__c
+  - Music_Sessions__c
+  - Narrative__c
+  - Notes__c
+  - Other_Exit_Reason__c
+  - Other_Payee__c
+  - Other_Termination_Reason__c
+  - Other_Terminiation_Reason__c
+  - Outdoor_Vendor__c
+  - Pay_to_Parent_Other__c
+  - Pui_Tak_ID__c
+  - Refund_Amount__c
+  - Refund_Check_Date__c
+  - Refund_Check_Number__c
+  - Refund_Reason__c
+  - Sanitation_Type__c
+  - School__c
+  - Start_Date__c
+  - Status__c
+  - T_shirt_Size__c
+  - Total_Due_for_Enrollee_currency__c
+  lookups:
+    Class__c:
+      table:
+      - Class__c
+    Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Doctor__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Emergency_Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Enrollment_Summary_and_Payment__c:
+      table:
+      - Enrollment_Summary__c
+    Parent_1__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Parent_2__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Program_Engagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+      after: Insert pmdm__ProgramEngagement__c
+Insert Attendance__c:
+  sf_object: Attendance__c
+  fields:
+  - Date__c
+  - End_Time__c
+  - RecordTypeId
+  - Start_Time__c
+  - Status__c
+  - System_Created__c
+  lookups:
+    Class_Roster__c:
+      table:
+      - Class_Roster__c
+    Class_Session__c:
+      table:
+      - Class_Session__c
+Insert Client_Assistance__c:
+  sf_object: Client_Assistance__c
+  fields:
+  - Amount__c
+  - Date__c
+  - Name
+  - Type__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    Program_Engagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+      after: Insert pmdm__ProgramEngagement__c
+Insert Client_Id__c:
+  sf_object: Client_Id__c
+  fields:
+  - Id_2__c
+  - Id_3__c
+  - Id_4__c
+  - SSN__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+      after: Insert Contact
+Insert Contact:
+  sf_object: Contact
+  fields:
+  - Address_Notes__c
+  - Charity_Tracker_Case__c
+  - Chinese_Name__c
+  - Client_CCU_ID__c
+  - Client_Single_Parent__c
+  - Client_Special_Needs_Family__c
+  - Communicate_in_Chinese__c
+  - Country_of_Origin__c
+  - Date_Entered_US__c
+  - DoNotCall
+  - Email_notes__c
+  - Emergency_Address__c
+  - Emergency_Relationship__c
+  - Emergency_Telephone__c
+  - FirstName
+  - GW_Volunteers__Volunteer_Auto_Reminder_Email_Opt_Out__c
+  - GW_Volunteers__Volunteer_Availability__c
+  - GW_Volunteers__Volunteer_Last_Web_Signup_Date__c
+  - GW_Volunteers__Volunteer_Manager_Notes__c
+  - GW_Volunteers__Volunteer_Notes__c
+  - GW_Volunteers__Volunteer_Organization__c
+  - GW_Volunteers__Volunteer_Skills__c
+  - GW_Volunteers__Volunteer_Status__c
+  - Gender__c
+  - HasOptedOutOfEmail
+  - In_Home_Group_Number__c
+  - LastName
+  - Last_Attendance_Date__c
+  - Legacy_Donor_ID__c
+  - Letter_Opt_Out__c
+  - MACleanCity__c
+  - MACleanCountry__c
+  - MACleanCounty__c
+  - MACleanDistrict__c
+  - MACleanPostalCode__c
+  - MACleanState__c
+  - MACleanStreet__c
+  - MALatitude__c
+  - MALongitude__c
+  - MAQuality__c
+  - MASimilarity__c
+  - MASkipGeocoding__c
+  - MAVerifiedLatitude__c
+  - MAVerifiedLongitude__c
+  - PTC_Role__c
+  - Phone_notes__c
+  - Primary_Dialect__c
+  - Race_Ethnicity__c
+  - SSN_last_4_digits__c
+  - Social_Security_Number__c
+  - Volunteer_Application_Received__c
+  - Volunteer_Approval__c
+  - Volunteer_Approved_with_Minors__c
+  - Volunteer_Christian__c
+  - Volunteer_Language_Skills__c
+  - Volunteer_Program_Interest__c
+  - Volunteer_References__c
+  - Volunteer_Working_with_Minors__c
+  - caseman__AgeCategory__c
+  - caseman__ClientID__c
+  - caseman__EmergencyContactRole__c
+  - caseman__LegalName__c
+  - caseman__PhotoFileID__c
+  - caseman__PreferredCommunicationMethod__c
+  - caseman__PreferredPhoneField__c
+  - caseman__PreferredPhoneNumber__c
+  - caseman__Pronouns__c
+  - caseman__WatchListDate__c
+  - caseman__WatchList__c
+  - npe01__AlternateEmail__c
+  - npe01__HomeEmail__c
+  - npe01__PreferredPhone__c
+  - npe01__Preferred_Email__c
+  - npe01__Primary_Address_Type__c
+  - npe01__Private__c
+  - npe01__Secondary_Address_Type__c
+  - npe01__SystemAccountProcessor__c
+  - npe01__SystemIsIndividual__c
+  - npe01__WorkEmail__c
+  - npe01__WorkPhone__c
+  - npo02__AverageAmount__c
+  - npo02__Best_Gift_Year_Total__c
+  - npo02__Best_Gift_Year__c
+  - npo02__FirstCloseDate__c
+  - npo02__Household_Naming_Order__c
+  - npo02__Languages__c
+  - npo02__LargestAmount__c
+  - npo02__LastCloseDate__c
+  - npo02__LastMembershipAmount__c
+  - npo02__LastMembershipDate__c
+  - npo02__LastMembershipLevel__c
+  - npo02__LastMembershipOrigin__c
+  - npo02__LastOppAmount__c
+  - npo02__Level__c
+  - npo02__MembershipEndDate__c
+  - npo02__MembershipJoinDate__c
+  - npo02__Naming_Exclusions__c
+  - npo02__NumberOfClosedOpps__c
+  - npo02__NumberOfMembershipOpps__c
+  - npo02__OppAmount2YearsAgo__c
+  - npo02__OppAmountLastNDays__c
+  - npo02__OppAmountLastYear__c
+  - npo02__OppAmountThisYear__c
+  - npo02__OppsClosed2YearsAgo__c
+  - npo02__OppsClosedLastNDays__c
+  - npo02__OppsClosedLastYear__c
+  - npo02__OppsClosedThisYear__c
+  - npo02__SmallestAmount__c
+  - npo02__Soft_Credit_Last_Year__c
+  - npo02__Soft_Credit_This_Year__c
+  - npo02__Soft_Credit_Total__c
+  - npo02__Soft_Credit_Two_Years_Ago__c
+  - npo02__SystemHouseholdProcessor__c
+  - npo02__TotalMembershipOppAmount__c
+  - npo02__TotalOppAmount__c
+  - npsp__Deceased__c
+  - npsp__Exclude_from_Household_Formal_Greeting__c
+  - npsp__Exclude_from_Household_Informal_Greeting__c
+  - npsp__Exclude_from_Household_Name__c
+  - npsp__Soft_Credit_Last_N_Days__c
+  - npsp__Undeliverable_Address__c
+  - npsp__is_Address_Override__c
+  - pmdm__IsClient__c
+  - rh2__Currency_Test__c
+  - rh2__Integer_Test__c
+  lookups:
+    AccountId:
+      table:
+      - Account
+    Available_Files_Checklist__c:
+      table:
+      - File_Checklist__c
+      after: Insert File_Checklist__c
+    Background_Check_Approval__c:
+      table:
+      - Background_Check__c
+      after: Insert Background_Check__c
+    Background_Check_Expiration__c:
+      table:
+      - Background_Check__c
+      after: Insert Background_Check__c
+    Current_In_Home_Authorization__c:
+      table:
+      - Authorization__c
+    Current_Intake__c:
+      table:
+      - Intake__c
+      after: Insert Intake__c
+    Current_Transportation_Auth__c:
+      table:
+      - Authorization__c
+    ReportsToId:
+      table:
+      - Contact
+      after: Insert Contact
+    caseman__EmergencyContact__c:
+      table:
+      - Contact
+      after: Insert Contact
+    npsp__Current_Address__c:
+      table:
+      - npsp__Address__c
+    npsp__Primary_Affiliation__c:
+      table:
+      - Account
+Insert Background_Check__c:
+  sf_object: Background_Check__c
+  fields:
+  - Application_Prior_Issues__c
+  - Background_Check_Notes__c
+  - CANTS_check_date_received__c
+  - CANTS_check_results__c
+  - Criminal_Check_online_date_received__c
+  - Criminal_Check_online_results__c
+  - Fingerprint_Criminal_Check_date__c
+  - Fingerprint_Criminal_Check_results__c
+  - Mandated_Reporter_Training_Date__c
+  - Mandated_Reporter_Training__c
+  - Name
+  - Sex_Offender_check_date__c
+  - Sex_Offender_check_results__c
+  lookups:
+    Contact_volunteer__c:
+      table:
+      - Contact
+Insert Event_Participant__c:
+  sf_object: Event_Participant__c
+  lookups:
+    Birdseye_Event__c:
+      table:
+      - Birdseye_Event__c
+    Participant__c:
+      table:
+      - Contact
+Insert File_Checklist__c:
+  sf_object: File_Checklist__c
+  fields:
+  - RecordTypeId
+  - Ssn_Verification_Expired__c
+  - Ssn_Verification_Uploaded_Date__c
+  - Ssn_verification__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+Insert Group_Member__c:
+  sf_object: Group_Member__c
+  fields:
+  - End_Date__c
+  - Name
+  - Start_Date__c
+  - Status__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+    Group__c:
+      table:
+      - Group__c
+Insert IWC_Intake__c:
+  sf_object: IWC_Intake__c
+  fields:
+  - Annual_Household_Income__c
+  - Assistance_Goals__c
+  - Background_Information__c
+  - Client_strength_resources_support__c
+  - Conclusion_and_Recommendations__c
+  - Current_Disability_Gov_t_Benefits__c
+  - Current_Gov_t_Benefits__c
+  - Current_Minor_Gov_t_Benefits__c
+  - Current_U_T_Visa_Asylum_Applicant__c
+  - Current_Undocumented_Gov_t_Benefits__c
+  - Currrent_Senior_Gov_t_Benefits__c
+  - Date_of_Birth__c
+  - Education_Employment_Assessment__c
+  - Emergency_Contact__c
+  - Financial_Situation__c
+  - Goal_Implementation_Plan_Notes__c
+  - Goal_and_Implementation_Plan__c
+  - Gov_t_Benefits_notes__c
+  - Household_notes__c
+  - Housing__c
+  - How_did_you_hear_about_IWC__c
+  - Immediate_Need__c
+  - Immigration_Status__c
+  - Immigration_Status_notes__c
+  - Intake_Date__c
+  - Issues_notes__c
+  - Legal_Safety_Assessment__c
+  - Marital_Status__c
+  - Marital_Status_notes__c
+  - Monthly_Income__c
+  - Name
+  - Other_Issues__c
+  - Other_Sources_of_Income__c
+  - Physical_Behavioral_Health_Assessment__c
+  - Presenting_Issue__c
+  - Prior_assistance_from_other_IWC__c
+  - Recruitment_Notes__c
+  - Secondary_Needs_Other_Needs__c
+  - Social_Environmental_Assessment__c
+  - Victim_of_Domestic_Violence__c
+  - of_Adults_in_Household__c
+  - of_Minors_in_Household__c
+  - of_Seniors_65__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+Insert Incident_Report__c:
+  sf_object: Incident_Report__c
+  fields:
+  - Date__c
+  - Description__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+Insert Income_Detail__c:
+  sf_object: Income_Detail__c
+  fields:
+  - Amount__c
+  - Archive_Date__c
+  - Archive__c
+  - Frequency__c
+  - Include_in_Household_Income__c
+  lookups:
+    Account__c:
+      table:
+      - Account
+    Contact__c:
+      table:
+      - Contact
+Insert Intake__c:
+  sf_object: Intake__c
+  fields:
+  - Adult_Guardianship_Date__c
+  - Children_0_17_Number__c
+  - Children_0_17__c
+  - Classroom_Type__c
+  - Classroom__c
+  - Current_Employment_Status__c
+  - Current_Housing_Status__c
+  - Current_IEP__c
+  - DRS_Home_Service_Program_Application__c
+  - Disability_Other__c
+  - Disability_Status__c
+  - Educational_Attainment__c
+  - Enjoy_Playing_With_Others__c
+  - Feeding_Oneself__c
+  - Follow_Instructions__c
+  - Going_to_the_Bathroom_Alone__c
+  - Grade__c
+  - Gross_Income__c
+  - Health_Insurance__c
+  - High_School_Graduation_Date__c
+  - IEP__c
+  - Intake_Date__c
+  - Is_Head_of_Household__c
+  - Letter_of_Intent__c
+  - Medicaid_Card__c
+  - On_Public_Assistance__c
+  - PUNS_Date__c
+  - Perfer_to_be_Alone__c
+  - Public_Aid_ID_Not_Avail__c
+  - Public_Aid_ID__c
+  - RecordTypeId
+  - SSI__c
+  - School_Name__c
+  - Services_Desired__c
+  - State_ID__c
+  - Temper_Tantrum_in_Public__c
+  - Using_Gestures_to_Communicate__c
+  - Using_Verbal_Language_to_Express_Needs__c
+  - Veteran_Status__c
+  - What_Calms_HimHer_Down__c
+  - What_Triggers_Tantrum__c
+  - in_Household__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+    Other_Head_of_Household__c:
+      table:
+      - Contact
+    Program__c:
+      table:
+      - pmdm__Program__c
+Insert Master_Schedule__c:
+  sf_object: Master_Schedule__c
+  fields:
+  - Name
+  - RecordTypeId
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+Insert Referral__c:
+  sf_object: Referral__c
+  fields:
+  - Date__c
+  - Department__c
+  - Email__c
+  - FirstName__c
+  - LastName__c
+  - Phone__c
+  - RecordTypeId
+  - Referral_Note__c
+  - Status_Note__c
+  - Status__c
+  - Type__c
+  lookups:
+    Birdseye_Event__c:
+      table:
+      - Birdseye_Event__c
+    Contact__c:
+      table:
+      - Contact
+    Program__c:
+      table:
+      - pmdm__Program__c
+    Referred_By__c:
+      table:
+      - Contact
+    Third_Party__c:
+      table:
+      - Account
+Insert Rental_Utility_Assistance__c:
+  sf_object: Rental_Utility_Assistance__c
+  fields:
+  - Amount_of_Payment__c
+  - Application_Date__c
+  - Check_Date__c
+  - Check_Number__c
+  - Client_Consent_completed__c
+  - Date_Issued_to_Payee__c
+  - Date_Range_Covered_End__c
+  - Date_Range_Covered_Start__c
+  - Federal_Stimulus__c
+  - Financial_Assistance_Provided__c
+  - Financial_Eligibility__c
+  - Household_Income__c
+  - Household_Size__c
+  - Landlord_City__c
+  - Landlord_Email__c
+  - Landlord_Name__c
+  - Landlord_Phone__c
+  - Landlord_State__c
+  - Landlord_Street__c
+  - Landlord_Zip__c
+  - Landlord_cooperation_efforts__c
+  - Landlord_not_responsive_note__c
+  - Monthly_Rent_Amount__c
+  - Months_of_Rental_Assistance_Requested__c
+  - Months_of_Utility_Assistance_Requested__c
+  - Name
+  - Other_Rental_Assistance__c
+  - Outstanding_Rent_Amount__c
+  - Outstanding_Utility_Amount__c
+  - Payee_Address__c
+  - Payee_City__c
+  - Payee_Name__c
+  - Payee_State__c
+  - Payee_Type__c
+  - Payee_Zip__c
+  - Prior_Rental_Assistance__c
+  - Proof_notes__c
+  - Proof_of_Address__c
+  - Proof_of_Financial_Hardship__c
+  - Proof_of_Identity__c
+  - Proof_of_Income__c
+  - Rental_Assistance_Requested__c
+  - Requested_Amount_Comments__c
+  - Status__c
+  - Utility_Assistance_Requested__c
+  - Utility_Type__c
+  lookups:
+    Case__c:
+      table:
+      - Case
+    Contact__c:
+      table:
+      - Contact
+Insert SFDC_Class__c:
+  sf_object: SFDC_Class__c
+  fields:
+  - Active__c
+  - Age_Group__c
+  - Date_Offered__c
+  - Facility_Location__c
+  - Facility_Room__c
+  - Facility__c
+  - Max_Capacity__c
+  - Name
+  - Program_Days__c
+  - Program_End_Date__c
+  - Program_Fee__c
+  - Program_Name__c
+  - Program_Start_Date__c
+  - Program_Time_Period__c
+  - Program_Year__c
+  - Pui_Tak_Center_program__c
+  - Section__c
+  - Session1__c
+  - Session2__c
+  - Session3__c
+  - Session4__c
+  - Time_End__c
+  - Time_Start__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+    Fiscal_Year__c:
+      table:
+      - Fiscal_Year__c
+    Program__c:
+      table:
+      - Program__c
+    Time_Period__c:
+      table:
+      - Time_Period__c
+Insert caseman__Intake__c:
+  sf_object: caseman__Intake__c
+  fields:
+  - Name
+  - RecordTypeId
+  - caseman__CloseDate__c
+  - caseman__Description__c
+  - caseman__Result__c
+  - caseman__Stage__c
+  lookups:
+    caseman__Contact__c:
+      table:
+      - Contact
+    caseman__HouseholdAccount__c:
+      table:
+      - Account
+Insert npe03__Recurring_Donation__c:
+  sf_object: npe03__Recurring_Donation__c
+  fields:
+  - IATS_recurring__IATS_Address__c
+  - IATS_recurring__IATS_City__c
+  - IATS_recurring__IATS_Country__c
+  - IATS_recurring__IATS_Email__c
+  - IATS_recurring__IATS_Fax__c
+  - IATS_recurring__IATS_First_Name__c
+  - IATS_recurring__IATS_Item_10_Label__c
+  - IATS_recurring__IATS_Item_10__c
+  - IATS_recurring__IATS_Item_11_Label__c
+  - IATS_recurring__IATS_Item_11__c
+  - IATS_recurring__IATS_Item_12_Label__c
+  - IATS_recurring__IATS_Item_12__c
+  - IATS_recurring__IATS_Item_13_Label__c
+  - IATS_recurring__IATS_Item_13__c
+  - IATS_recurring__IATS_Item_14_Label__c
+  - IATS_recurring__IATS_Item_14__c
+  - IATS_recurring__IATS_Item_15_Label__c
+  - IATS_recurring__IATS_Item_15__c
+  - IATS_recurring__IATS_Item_1_Label__c
+  - IATS_recurring__IATS_Item_1__c
+  - IATS_recurring__IATS_Item_2_Label__c
+  - IATS_recurring__IATS_Item_2__c
+  - IATS_recurring__IATS_Item_3_Label__c
+  - IATS_recurring__IATS_Item_3__c
+  - IATS_recurring__IATS_Item_4_Label__c
+  - IATS_recurring__IATS_Item_4__c
+  - IATS_recurring__IATS_Item_5_Label__c
+  - IATS_recurring__IATS_Item_5__c
+  - IATS_recurring__IATS_Item_6_Label__c
+  - IATS_recurring__IATS_Item_6__c
+  - IATS_recurring__IATS_Item_7_Label__c
+  - IATS_recurring__IATS_Item_7__c
+  - IATS_recurring__IATS_Item_8_Label__c
+  - IATS_recurring__IATS_Item_8__c
+  - IATS_recurring__IATS_Item_9_Label__c
+  - IATS_recurring__IATS_Item_9__c
+  - IATS_recurring__IATS_Last_Name__c
+  - IATS_recurring__IATS_Phone1__c
+  - IATS_recurring__IATS_Phone2__c
+  - IATS_recurring__IATS_State__c
+  - IATS_recurring__IATS_Zip_Code__c
+  - IATS_recurring__iATS_Company_Name__c
+  - IATS_recurring__iATS_Title__c
+  - Name
+  - npe03__Amount__c
+  - npe03__Date_Established__c
+  - npe03__Installment_Period__c
+  - npe03__Installments__c
+  - npe03__Last_Payment_Date__c
+  - npe03__Next_Payment_Date__c
+  - npe03__Open_Ended_Status__c
+  - npe03__Paid_Amount__c
+  - npe03__Schedule_Type__c
+  - npe03__Total_Paid_Installments__c
+  lookups:
+    npe03__Contact__c:
+      table:
+      - Contact
+    npe03__Organization__c:
+      table:
+      - Account
+    npe03__Recurring_Donation_Campaign__c:
+      table:
+      - Campaign
+Insert npe4__Relationship__c:
+  sf_object: npe4__Relationship__c
+  fields:
+  - First_to_Contact__c
+  - Guardian__c
+  - Second_to_Contact__c
+  - Third_to_Contact__c
+  - npe4__Description__c
+  - npe4__SYSTEM_SystemCreated__c
+  - npe4__Status__c
+  - npe4__Type__c
+  lookups:
+    npe4__Contact__c:
+      table:
+      - Contact
+    npe4__ReciprocalRelationship__c:
+      table:
+      - npe4__Relationship__c
+      after: Insert npe4__Relationship__c
+    npe4__RelatedContact__c:
+      table:
+      - Contact
+Insert npe5__Affiliation__c:
+  sf_object: npe5__Affiliation__c
+  fields:
+  - Requires_Background_Check_PTC_only__c
+  - Title__c
+  - npe5__Description__c
+  - npe5__EndDate__c
+  - npe5__Primary__c
+  - npe5__Role__c
+  - npe5__StartDate__c
+  - npe5__Status__c
+  lookups:
+    npe5__Contact__c:
+      table:
+      - Contact
+    npe5__Organization__c:
+      table:
+      - Account
+Insert Assessment__c:
+  sf_object: Assessment__c
+  fields:
+  - Adaptive_Equipment__c
+  - Allergic_to__c
+  - Bathing__c
+  - Behavioral_Supports__c
+  - Communication__c
+  - Continence__c
+  - Date__c
+  - Describe_if_Individualized__c
+  - Dressing__c
+  - Eating__c
+  - Emergency_Evacuation__c
+  - Family__c
+  - Favorite_Activity__c
+  - Finances__c
+  - Hygiene__c
+  - ICAP_Score__c
+  - Individualized_Supervision__c
+  - Info_That_Affects_Safety_and_WellBeing__c
+  - Interests__c
+  - Medical__c
+  - Mobility__c
+  - Prescribed_Diet__c
+  - Relaxation_Techniques__c
+  - Safety__c
+  - Sensory__c
+  - Standard_Program_Supervision__c
+  - Strengths__c
+  - Strong_Dislikes__c
+  - Transportation__c
+  - Type__c
+  lookups:
+    Contact__c:
+      table:
+      - Contact
+    Intake__c:
+      table:
+      - Intake__c
+Insert Opportunity:
+  sf_object: Opportunity
+  fields:
+  - Check_Date__c
+  - Check_Number__c
+  - CloseDate
+  - Donation_Designation__c
+  - IATSPayment__Address__c
+  - IATSPayment__City__c
+  - IATSPayment__Country__c
+  - IATSPayment__Email__c
+  - IATSPayment__Fax__c
+  - IATSPayment__First_Name__c
+  - IATSPayment__IATS_Title__c
+  - IATSPayment__Item1__c
+  - IATSPayment__Item2__c
+  - IATSPayment__Item3__c
+  - IATSPayment__Item4__c
+  - IATSPayment__Item5__c
+  - IATSPayment__Item6__c
+  - IATSPayment__Last_Name__c
+  - IATSPayment__Phone1__c
+  - IATSPayment__Phone2__c
+  - IATSPayment__State__c
+  - IATSPayment__Total_Approved_Transactions__c
+  - IATSPayment__Total_Number_of_Approved_Transactions__c
+  - IATSPayment__Total_Number_of_Rejected_Transactions__c
+  - IATSPayment__Zip_Code__c
+  - In_Honor_Memory_of__c
+  - In_Honor_of__c
+  - IsPrivate
+  - Name
+  - RecordTypeId
+  - StageName
+  - npe01__Contact_Id_for_Role__c
+  - npe01__Do_Not_Automatically_Create_Payment__c
+  - npe01__Member_Level__c
+  - npe01__Membership_End_Date__c
+  - npe01__Membership_Origin__c
+  - npe01__Membership_Start_Date__c
+  - npo02__CurrentGenerators__c
+  - npo02__DeliveryInstallationStatus__c
+  - npo02__MainCompetitors__c
+  - npo02__OrderNumber__c
+  - npo02__TrackingNumber__c
+  - npo02__systemHouseholdContactRoleProcessor__c
+  - npsp__Acknowledgment_Date__c
+  - npsp__Acknowledgment_Status__c
+  - npsp__Grant_Contract_Number__c
+  - npsp__Grant_Period_End_Date__c
+  - npsp__Grant_Period_Start_Date__c
+  - npsp__Grant_Program_Area_s__c
+  - npsp__Grant_Requirements_Website__c
+  - npsp__Is_Grant_Renewal__c
+  - npsp__Requested_Amount__c
+  lookups:
+    AccountId:
+      table:
+      - Account
+    CampaignId:
+      table:
+      - Campaign
+    ContactId:
+      table:
+      - Contact
+    Deposit__c:
+      table:
+      - Deposit__c
+    npe03__Recurring_Donation__c:
+      table:
+      - npe03__Recurring_Donation__c
+    npsp__Previous_Grant_Opportunity__c:
+      table:
+      - Opportunity
+      after: Insert Opportunity
+Insert SFDC_Enrollment__c:
+  sf_object: SFDC_Enrollment__c
+  fields:
+  - Allergen_Online_instructor__c
+  - Allergen_Online_self__c
+  - Amount_Paid__c
+  - CPDH_Manager_License__c
+  - Enrollment_Date__c
+  - Enrollment_Notes__c
+  - Fee_Discount_Reason__c
+  - Fee_Discount__c
+  - Fee_Other__c
+  - Follow_up_Items__c
+  - Follow_up_Items_del__c
+  - Food_Handler_Online_instructor__c
+  - Food_Handler_Online_self__c
+  - Grade_in_School__c
+  - Manager_Book_buy__c
+  - Manager_Book_loan__c
+  - Manager_Class__c
+  - Manager_Exam_only__c
+  - Manager_Re_Test_fee__c
+  - Manager_Replacement_License__c
+  - Music_Sessions__c
+  - Other_Payee__c
+  - Outdoor_Vendor__c
+  - Pay_To_Parent_Other__c
+  - RecordTypeId
+  - Refund_Amount__c
+  - Refund_Check_Date__c
+  - Refund_Check_Number__c
+  - Refund_Reason__c
+  - Sanitation_Student_Type__c
+  - School__c
+  - Status__c
+  - T_shirt_Size__c
+  - Total_Due_for_Enrollee_currency__c
+  lookups:
+    Class__c:
+      table:
+      - SFDC_Class__c
+    Contact__c:
+      table:
+      - Contact
+    Doctor__c:
+      table:
+      - Account
+    Emergency_Contact__c:
+      table:
+      - Contact
+    Enrollment_Summary__c:
+      table:
+      - Enrollment_Summary__c
+    Parent_1__c:
+      table:
+      - Contact
+    Parent_2__c:
+      table:
+      - Contact
+Insert Scheduled_Visit__c:
+  sf_object: Scheduled_Visit__c
+  fields:
+  - Name
+  lookups:
+    Master_Schedule__c:
+      table:
+      - Master_Schedule__c
+Insert pmdm__ProgramEngagement__c:
+  sf_object: pmdm__ProgramEngagement__c
+  fields:
+  - Application_Complete_Date__c
+  - Engagement_Date__c
+  - Expected_Graduation_Year__c
+  - Name
+  - Photo_Release_Signed__c
+  - School__c
+  - pmdm__ApplicationDate__c
+  - pmdm__AutoName_Override__c
+  - pmdm__EndDate__c
+  - pmdm__Role__c
+  - pmdm__Stage__c
+  - pmdm__StartDate__c
+  lookups:
+    External_Case_Manager__c:
+      table:
+      - Contact
+    caseman__Intake__c:
+      table:
+      - caseman__Intake__c
+    pmdm__Account__c:
+      table:
+      - Account
+    pmdm__Contact__c:
+      table:
+      - Contact
+    pmdm__ProgramCohort__c:
+      table:
+      - pmdm__ProgramCohort__c
+    pmdm__Program__c:
+      table:
+      - pmdm__Program__c
+Insert Checklist__c:
+  sf_object: Checklist__c
+  fields:
+  - FOC_Module_Progress__c
+  - FOC_Progress__c
+  lookups:
+    Program_Engagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+Insert Story__c:
+  sf_object: Story__c
+  fields:
+  - Department__c
+  - Share__c
+  - Story__c
+  lookups:
+    Campaign__c:
+      table:
+      - Campaign
+    Contact__c:
+      table:
+      - Contact
+    Program_Engagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+    Program__c:
+      table:
+      - pmdm__Program__c
+Insert pmdm__ServiceDelivery__c:
+  sf_object: pmdm__ServiceDelivery__c
+  fields:
+  - Date_of_Service__c
+  - End_Time__c
+  - Financial_Benefit__c
+  - Name
+  - Notes__c
+  - Start_Time__c
+  - pmdm__AutonameOverride__c
+  - pmdm__DeliveryDate__c
+  - pmdm__Quantity__c
+  lookups:
+    Birdseye_Event__c:
+      table:
+      - Birdseye_Event__c
+    Case__c:
+      table:
+      - Case
+    pmdm__Account__c:
+      table:
+      - Account
+    pmdm__Contact__c:
+      table:
+      - Contact
+    pmdm__ProgramEngagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+    pmdm__Service_Provider__c:
+      table:
+      - Contact
+    pmdm__Service__c:
+      table:
+      - pmdm__Service__c
+Insert caseman__ClientNote__c:
+  sf_object: caseman__ClientNote__c
+  fields:
+  - Case_Status__c
+  - Sub_Type__c
+  - Type__c
+  - caseman__Content__c
+  - caseman__Draft__c
+  - caseman__InteractionDate__c
+  - caseman__Status__c
+  - caseman__Subject__c
+  - caseman__TypeOfInteraction__c
+  lookups:
+    Service_Delivery__c:
+      table:
+      - pmdm__ServiceDelivery__c
+    caseman__Client__c:
+      table:
+      - Contact
+    caseman__ProgramEngagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
