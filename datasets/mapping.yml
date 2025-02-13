@@ -1631,7 +1631,6 @@ Insert pmdm__ServiceParticipant__c:
 Insert pmdm__ServiceSession__c:
   sf_object: pmdm__ServiceSession__c
   fields:
-  - Mapping_Forcer__c
   - Name
   - pmdm__NumAbsentServiceDeliveries__c
   - pmdm__NumPresentServiceDeliveries__c
