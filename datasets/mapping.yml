@@ -1579,3 +1579,52 @@ Insert caseman__ClientNote__c:
     caseman__ProgramEngagement__c:
       table:
       - pmdm__ProgramEngagement__c
+Insert pmdm__ServiceSchedule__c:
+  sf_object: pmdm__ServiceSchedule__c
+  fields:
+  - Name
+  - pmdm__AllDay__c
+  - pmdm__CreateServiceSessionRecords__c
+  - pmdm__DaysOfWeek__c
+  - pmdm__DefaultServiceQuantity__c
+  - pmdm__FirstSessionEnd__c
+  - pmdm__FirstSessionStart__c
+  - pmdm__Frequency__c
+  - pmdm__Interval__c
+  - pmdm__MonthlyRecurrenceOption__c
+  - pmdm__NumAbsentServiceDeliveries__c
+  - pmdm__NumPresentServiceDeliveries__c
+  - pmdm__NumberOfServiceSessions__c
+  - pmdm__ParticipantCapacity__c
+  - pmdm__ParticipantsEnrolled__c
+  - pmdm__ServiceScheduleEndDate__c
+  - pmdm__ServiceScheduleEnds__c
+  lookups:
+    pmdm__OtherServiceProvider__c:
+      table:
+      - Contact
+    pmdm__PrimaryServiceProvider__c:
+      table:
+      - Contact
+    pmdm__Service__c:
+      table:
+      - pmdm__Service__c
+Insert pmdm__ServiceParticipant__c:
+  sf_object: pmdm__ServiceParticipant__c
+  fields:
+  - Name
+  - pmdm__SignUpDate__c
+  - pmdm__Status__c
+  lookups:
+    pmdm__Contact__c:
+      table:
+      - Contact
+    pmdm__ProgramEngagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+    pmdm__ServiceSchedule__c:
+      table:
+      - pmdm__ServiceSchedule__c
+    pmdm__Service__c:
+      table:
+      - pmdm__Service__c
