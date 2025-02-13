@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '4.3.0'
+project:
+    name: Pui-Tak-Dataset
+    package:
+        name: Pui-Tak-Dataset
+        api_version: '62.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Pui-Tak-Dataset/tests
+            options:
+                outputdir: robot/Pui-Tak-Dataset/results
+
+    robot_testdoc:
+        options:
+            path: robot/Pui-Tak-Dataset/tests
+            output: robot/Pui-Tak-Dataset/doc/Pui-Tak-Dataset_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
