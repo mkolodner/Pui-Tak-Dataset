@@ -1628,3 +1628,26 @@ Insert pmdm__ServiceParticipant__c:
     pmdm__Service__c:
       table:
       - pmdm__Service__c
+Insert pmdm__ServiceSession__c:
+  sf_object: pmdm__ServiceSession__c
+  fields:
+  - Mapping_Forcer__c
+  - Name
+  - pmdm__NumAbsentServiceDeliveries__c
+  - pmdm__NumPresentServiceDeliveries__c
+  - pmdm__SessionEnd__c
+  - pmdm__SessionStart__c
+  - pmdm__Status__c
+  lookups:
+    Service__c:
+      table:
+      - pmdm__Service__c
+    pmdm__OtherServiceProvider__c:
+      table:
+      - Contact
+    pmdm__PrimaryServiceProvider__c:
+      table:
+      - Contact
+    pmdm__ServiceSchedule__c:
+      table:
+      - pmdm__ServiceSchedule__c
