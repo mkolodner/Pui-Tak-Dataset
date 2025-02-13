@@ -1,9 +1,15 @@
 BEGIN TRANSACTION;
 CREATE TABLE "Account" (
 	id VARCHAR(255) NOT NULL, 
+	"BillingStreet" VARCHAR(255), 
+	"BillingCity" VARCHAR(255), 
+	"BillingState" VARCHAR(255), 
+	"BillingPostalCode" VARCHAR(255), 
+	"BillingCountry" VARCHAR(255), 
 	"Church_Affiliation_of_Account__c" VARCHAR(255), 
 	"Detailed_AMI__c" VARCHAR(255), 
 	"Detailed_FPL__c" VARCHAR(255), 
+	"Description" VARCHAR(255), 
 	"Last_Attendance_Date__c" VARCHAR(255), 
 	"Legacy_Household_ID__c" VARCHAR(255), 
 	"MALatitude__c" VARCHAR(255), 
@@ -14,6 +20,14 @@ CREATE TABLE "Account" (
 	"Self_Reported_FPL__c" VARCHAR(255), 
 	"Self_Reported_Income__c" VARCHAR(255), 
 	"Self_Reported_Number_in_HH__c" VARCHAR(255), 
+	"ShippingStreet" VARCHAR(255), 
+	"ShippingCity" VARCHAR(255), 
+	"ShippingState" VARCHAR(255), 
+	"ShippingPostalCode" VARCHAR(255), 
+	"ShippingCountry" VARCHAR(255), 
+	"Type" VARCHAR(255), 
+	"Phone" VARCHAR(255), 
+	"Fax" VARCHAR(255), 
 	"Total_Gifts_Five_Years_Ago__c" VARCHAR(255), 
 	"Total_Gifts_Four_Years_Ago__c" VARCHAR(255), 
 	"Total_Gifts_Three_Years_Ago__c" VARCHAR(255), 
@@ -58,12 +72,13 @@ CREATE TABLE "Account" (
 	"npsp__Grantmaker__c" VARCHAR(255), 
 	"npsp__Number_of_Household_Members__c" VARCHAR(255), 
 	"npsp__Undeliverable_Address__c" VARCHAR(255), 
+	"Website" VARCHAR(255), 
 	"ParentId" VARCHAR(255), 
 	"npe01__One2OneContact__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Account" VALUES('Account-1','','','','','','','','Michael Kolodner Household','012C0000000i2VQIAY','','','','','','','','','','','','','True','Household Account','0.0','','','','Michael Kolodner','','Michael','0.0','','0.0','','','','0.0','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','0.0','0.0','0.0','','False','1.0','False','','Contact-1');
-INSERT INTO "Account" VALUES('Account-2','','','','','','','','Kolodner.com LLC','012C0000000i2VRIAY','','','','','','','','','','','','','False','','0.0','','','','','','','0.0','','0.0','','','','0.0','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','0.0','0.0','0.0','','False','','False','','Contact-1');
+INSERT INTO "Account" VALUES('Account-1','1007 Fraser Road','Erdenheim','PA','19038','United States','','','','','','','','','Michael Kolodner Household','012C0000000i2VQIAY','','','','','','','','','','','','','','','','','','','','','True','Household Account','0.0','','','','Michael Kolodner','','Michael','0.0','','0.0','','','','0.0','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','0.0','0.0','0.0','','False','1.0','False','','','Contact-1');
+INSERT INTO "Account" VALUES('Account-2','1007 Fraser Road','Erdenheim','PA','19038','United States','','','','michael''s LLC','','','','','Kolodner.com LLC','012C0000000i2VRIAY','','','','','1007 Fraser Road','Erdenheim','PA','19038','United States','','2152425272','1234567890','','','','','','','','','False','','0.0','','','','','','','0.0','','0.0','','','','0.0','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','0.0','0.0','0.0','','False','','False','www.kolodner.com','','Contact-1');
 CREATE TABLE "Account_rt_mapping" (
 	record_type_id VARCHAR(18) NOT NULL, 
 	developer_name VARCHAR(255), 
@@ -536,6 +551,11 @@ CREATE TABLE "Contact" (
 	"Last_Attendance_Date__c" VARCHAR(255), 
 	"Legacy_Donor_ID__c" VARCHAR(255), 
 	"Letter_Opt_Out__c" VARCHAR(255), 
+	"MailingStreet" VARCHAR(255), 
+	"MailingCity" VARCHAR(255), 
+	"MailingState" VARCHAR(255), 
+	"MailingPostalCode" VARCHAR(255), 
+	"MailingCountry" VARCHAR(255), 
 	"MACleanCity__c" VARCHAR(255), 
 	"MACleanCountry__c" VARCHAR(255), 
 	"MACleanCounty__c" VARCHAR(255), 
@@ -550,13 +570,16 @@ CREATE TABLE "Contact" (
 	"MASkipGeocoding__c" VARCHAR(255), 
 	"MAVerifiedLatitude__c" VARCHAR(255), 
 	"MAVerifiedLongitude__c" VARCHAR(255), 
+	"MobilePhone" VARCHAR(255), 
 	"PTC_Role__c" VARCHAR(255), 
 	"Phone" VARCHAR(255), 
 	"Phone_notes__c" VARCHAR(255), 
 	"Primary_Dialect__c" VARCHAR(255), 
 	"Race_Ethnicity__c" VARCHAR(255), 
+	"Salutation" VARCHAR(255), 
 	"SSN_last_4_digits__c" VARCHAR(255), 
 	"Social_Security_Number__c" VARCHAR(255), 
+	"Title" VARCHAR(255), 
 	"Volunteer_Application_Received__c" VARCHAR(255), 
 	"Volunteer_Approval__c" VARCHAR(255), 
 	"Volunteer_Approved_with_Minors__c" VARCHAR(255), 
@@ -645,7 +668,7 @@ CREATE TABLE "Contact" (
 	"npsp__Primary_Affiliation__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Contact" VALUES('Contact-1','','1973-12-14','','','','False','False','False','China','','False','michael@kolodner.com','','','','','Michael','False','','','','','','','','Male','False','','Kolodner','','','False','','','','','','','','','','','','False','','','','2152425272','','English','Asian','1234','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','','False','','','0.0','','','','','','0.0','','0.0','','','','0.0','','','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','','','','All New or Edited Contacts','0.0','0.0','False','False','False','False','0.0','False','False','False','','','Account-1','','','','','','','','','npsp__Address__c-1','Account-2');
+INSERT INTO "Contact" VALUES('Contact-1','','1973-12-14','','','','False','False','False','China','','False','michael@kolodner.com','','','','','Michael','False','','','','','','','','Male','False','','Kolodner','','','False','1007 Fraser Road','Erdenheim','PA','19038','United States','','','','','','','','','','','','False','','','','','2152425272','','English','Asian','','1234','','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','','False','','','0.0','','','','','','0.0','','0.0','','','','0.0','','','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','','','','All New or Edited Contacts','0.0','0.0','False','False','False','False','0.0','False','False','False','','','Account-1','','','','','','','','','npsp__Address__c-1','Account-2');
 CREATE TABLE "Department__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
