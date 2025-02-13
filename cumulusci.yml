@@ -30,7 +30,7 @@ flows:
             1:
                 task: delete_data 
                 options: 
-                    objects: Campaign,Opportunity,Contact,Account,npe03__Recurring_Donation__c,npsp__Address__c,Lead
+                    objects: caseman__ClientNote__c,pmdm__ServiceDelivery__c,Story__c,Checklist__c,pmdm__ProgramEngagement__c,Scheduled_Visit__c,SFDC_Enrollment__c,Opportunity,Assessment__c,npe03__Recurring_Donation__c,caseman__Intake__c,SFDC_Class__c,Rental_Utility_Assistance__c,Referral__c,Master_Schedule__c,Intake__c,Income_Detail__c,Incident_Report__c,IWC_Intake__c,Group_Member__c,File_Checklist__c,Event_Participant__c,Background_Check__c,Contact,Client_Id__c,Client_Assistance__c,Attendance__c,Class_Roster__c,Class__c,Class_Session__c,Case_Followup__c,Case,Birdseye_Event__c,Billing_Entry__c,Authorization__c,Enrollment_Summary__c,Account,Lead,pmdm__Service__c,Program__c,GW_Volunteers__Volunteer_Job__c,Vehicle__c,Time_Period__c,Stop_Status__c,Service_Cost__c,Route__c,Report_Batch__c,Poverty_Level__c,Group__c,Fiscal_Year__c,Deposit__c,Department__c,Campaign
             2: 
                 task: disable_tdtm_trigger_handlers
                 options:
