@@ -62,12 +62,17 @@ CREATE TABLE "Account" (
 	"npe01__One2OneContact__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+INSERT INTO "Account" VALUES('Account-1','','','','','','','','Michael Kolodner Household','012C0000000i2VQIAY','','','','','','','','','','','','','True','Household Account','0.0','','','','Michael Kolodner','','Michael','0.0','','0.0','','','','0.0','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','0.0','0.0','0.0','','False','1.0','False','','Contact-1');
+INSERT INTO "Account" VALUES('Account-2','','','','','','','','Kolodner.com LLC','012C0000000i2VRIAY','','','','','','','','','','','','','False','','0.0','','','','','','','0.0','','0.0','','','','0.0','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','0.0','0.0','0.0','','False','','False','','Contact-1');
 CREATE TABLE "Account_rt_mapping" (
 	record_type_id VARCHAR(18) NOT NULL, 
 	developer_name VARCHAR(255), 
 	is_person_type BOOLEAN, 
 	PRIMARY KEY (record_type_id)
 );
+INSERT INTO "Account_rt_mapping" VALUES('0120y000000p9V0AAI','Branch',0);
+INSERT INTO "Account_rt_mapping" VALUES('012C0000000i2VQIAY','HH_Account',0);
+INSERT INTO "Account_rt_mapping" VALUES('012C0000000i2VRIAY','Organization',0);
 CREATE TABLE "Assessment__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Adaptive_Equipment__c" VARCHAR(255), 
@@ -500,6 +505,7 @@ CREATE TABLE "Client_Id__c" (
 CREATE TABLE "Contact" (
 	id VARCHAR(255) NOT NULL, 
 	"Address_Notes__c" VARCHAR(255), 
+	"Birthdate" VARCHAR(255), 
 	"Charity_Tracker_Case__c" VARCHAR(255), 
 	"Chinese_Name__c" VARCHAR(255), 
 	"Client_CCU_ID__c" VARCHAR(255), 
@@ -509,6 +515,7 @@ CREATE TABLE "Contact" (
 	"Country_of_Origin__c" VARCHAR(255), 
 	"Date_Entered_US__c" VARCHAR(255), 
 	"DoNotCall" VARCHAR(255), 
+	"Email" VARCHAR(255), 
 	"Email_notes__c" VARCHAR(255), 
 	"Emergency_Address__c" VARCHAR(255), 
 	"Emergency_Relationship__c" VARCHAR(255), 
@@ -544,6 +551,7 @@ CREATE TABLE "Contact" (
 	"MAVerifiedLatitude__c" VARCHAR(255), 
 	"MAVerifiedLongitude__c" VARCHAR(255), 
 	"PTC_Role__c" VARCHAR(255), 
+	"Phone" VARCHAR(255), 
 	"Phone_notes__c" VARCHAR(255), 
 	"Primary_Dialect__c" VARCHAR(255), 
 	"Race_Ethnicity__c" VARCHAR(255), 
@@ -637,6 +645,7 @@ CREATE TABLE "Contact" (
 	"npsp__Primary_Affiliation__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+INSERT INTO "Contact" VALUES('Contact-1','','1973-12-14','','','','False','False','False','China','','False','michael@kolodner.com','','','','','Michael','False','','','','','','','','Male','False','','Kolodner','','','False','','','','','','','','','','','','False','','','','2152425272','','English','Asian','1234','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','','False','','','0.0','','','','','','0.0','','0.0','','','','0.0','','','','','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','','','','','All New or Edited Contacts','0.0','0.0','False','False','False','False','0.0','False','False','False','','','Account-1','','','','','','','','','npsp__Address__c-1','Account-2');
 CREATE TABLE "Department__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
@@ -1283,6 +1292,7 @@ CREATE TABLE "npe5__Affiliation__c" (
 	"npe5__Organization__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+INSERT INTO "npe5__Affiliation__c" VALUES('npe5__Affiliation__c-1','False','','','','True','','2025-02-13','Current','Contact-1','Account-2');
 CREATE TABLE "npsp__Address__c" (
 	id VARCHAR(255) NOT NULL, 
 	"npsp__API_Response__c" VARCHAR(255), 
@@ -1310,6 +1320,7 @@ CREATE TABLE "npsp__Address__c" (
 	"npsp__Household_Account__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+INSERT INTO "npsp__Address__c" VALUES('npsp__Address__c-1','','Home','','False','','','True','','2025-02-13','Erdenheim','United States','19038','PA','','1007 Fraser Road','','','','','False','','False','Account-1');
 CREATE TABLE "pmdm__ProgramCohort__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 

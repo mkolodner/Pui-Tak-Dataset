@@ -141,9 +141,15 @@ Insert Lead:
 Insert Account:
   sf_object: Account
   fields:
+  - BillingStreet
+  - BillingCity
+  - BillingState
+  - BillingPostalCode
+  - BillingCountry
   - Church_Affiliation_of_Account__c
   - Detailed_AMI__c
   - Detailed_FPL__c
+  - Description
   - Last_Attendance_Date__c
   - Legacy_Household_ID__c
   - MALatitude__c
@@ -154,6 +160,14 @@ Insert Account:
   - Self_Reported_FPL__c
   - Self_Reported_Income__c
   - Self_Reported_Number_in_HH__c
+  - ShippingStreet
+  - ShippingCity
+  - ShippingState
+  - ShippingPostalCode
+  - ShippingCountry
+  - Type
+  - Phone
+  - Fax
   - Total_Gifts_Five_Years_Ago__c
   - Total_Gifts_Four_Years_Ago__c
   - Total_Gifts_Three_Years_Ago__c
@@ -198,6 +212,7 @@ Insert Account:
   - npsp__Grantmaker__c
   - npsp__Number_of_Household_Members__c
   - npsp__Undeliverable_Address__c
+  - Website
   lookups:
     ParentId:
       table:
@@ -709,6 +724,7 @@ Insert Contact:
   sf_object: Contact
   fields:
   - Address_Notes__c
+  - Birthdate
   - Charity_Tracker_Case__c
   - Chinese_Name__c
   - Client_CCU_ID__c
@@ -718,6 +734,7 @@ Insert Contact:
   - Country_of_Origin__c
   - Date_Entered_US__c
   - DoNotCall
+  - Email
   - Email_notes__c
   - Emergency_Address__c
   - Emergency_Relationship__c
@@ -738,6 +755,11 @@ Insert Contact:
   - Last_Attendance_Date__c
   - Legacy_Donor_ID__c
   - Letter_Opt_Out__c
+  - MailingStreet
+  - MailingCity
+  - MailingState
+  - MailingPostalCode
+  - MailingCountry
   - MACleanCity__c
   - MACleanCountry__c
   - MACleanCounty__c
@@ -752,12 +774,16 @@ Insert Contact:
   - MASkipGeocoding__c
   - MAVerifiedLatitude__c
   - MAVerifiedLongitude__c
+  - MobilePhone
   - PTC_Role__c
+  - Phone
   - Phone_notes__c
   - Primary_Dialect__c
   - Race_Ethnicity__c
+  - Salutation
   - SSN_last_4_digits__c
   - Social_Security_Number__c
+  - Title
   - Volunteer_Application_Received__c
   - Volunteer_Approval__c
   - Volunteer_Approved_with_Minors__c
