@@ -1411,14 +1411,21 @@ CREATE TABLE "pmdm__ServiceParticipant__c" (
 	"pmdm__Service__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-1','Already Learnéd - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-2','Dritte Studentin - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-3','Eager Learner - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-4','Hamishat Talmida - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-5','Michael Kolodner - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-6','Rabi'' Talib - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-7','Uno Estudiante - 3x/week 10 weeks','2025-02-13','Enrolled','','','pmdm__ServiceSchedule__c-1','');
-INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-8','Already Learnéd - Three Nights Per Week Ten Weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-1','Already Learnéd - Three Nights Per Week Ten Weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-2','Already Learnéd - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-3','Dritte Studentin - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-4','Eager Learner - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-5','Hamishat Talmida - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-6','Michael Kolodner - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-7','Rabi'' Talib - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-8','Uno Estudiante - 3x/week 10 weeks','2025-02-13','Enrolled','','','','');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-9','Already Learnéd - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-6','pmdm__ProgramEngagement__c-6','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-10','Dritte Studentin - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-3','pmdm__ProgramEngagement__c-3','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-11','Eager Learner - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-7','pmdm__ProgramEngagement__c-7','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-12','Hamishat Talmida - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-2','pmdm__ProgramEngagement__c-2','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-13','Michael Kolodner - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-4','pmdm__ProgramEngagement__c-4','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-14','Rabi'' Talib - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-1','pmdm__ProgramEngagement__c-1','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceParticipant__c" VALUES('pmdm__ServiceParticipant__c-15','Uno Estudiante - 3x per week, 10 weeks','2025-02-13','Enrolled','Contact-5','pmdm__ProgramEngagement__c-5','pmdm__ServiceSchedule__c-1','pmdm__Service__c-1');
 CREATE TABLE "pmdm__ServiceSchedule__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
@@ -1443,7 +1450,81 @@ CREATE TABLE "pmdm__ServiceSchedule__c" (
 	"pmdm__Service__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "pmdm__ServiceSchedule__c" VALUES('pmdm__ServiceSchedule__c-1','3x/week 10 weeks','False','True','2;4;6','','2025-02-14T01:00:00.000+0000','2025-02-13T23:00:00.000+0000','Weekly','1.0','','','','30.0','','','','After','','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceSchedule__c" VALUES('pmdm__ServiceSchedule__c-1','3x per week, 10 weeks','False','True','2;4;6','','2025-02-14T01:30:00.000+0000','2025-02-13T23:30:00.000+0000','Weekly','1.0','','','','30.0','','','','After','','','pmdm__Service__c-1');
+CREATE TABLE "pmdm__ServiceSession__c" (
+	id VARCHAR(255) NOT NULL, 
+	"Name" VARCHAR(255), 
+	"pmdm__NumAbsentServiceDeliveries__c" VARCHAR(255), 
+	"pmdm__NumPresentServiceDeliveries__c" VARCHAR(255), 
+	"pmdm__SessionEnd__c" VARCHAR(255), 
+	"pmdm__SessionStart__c" VARCHAR(255), 
+	"pmdm__Status__c" VARCHAR(255), 
+	"Service__c" VARCHAR(255), 
+	"pmdm__OtherServiceProvider__c" VARCHAR(255), 
+	"pmdm__PrimaryServiceProvider__c" VARCHAR(255), 
+	"pmdm__ServiceSchedule__c" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-1','2/17/2025: 3x/week 10 weeks','','','2025-02-18T01:00:00.000+0000','2025-02-17T23:00:00.000+0000','Complete','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-2','2/19/2025: 3x/week 10 weeks','','','2025-02-20T01:00:00.000+0000','2025-02-19T23:00:00.000+0000','Complete','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-3','2/21/2025: 3x/week 10 weeks','','','2025-02-22T01:00:00.000+0000','2025-02-21T23:00:00.000+0000','Complete','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-4','2/24/2025: 3x/week 10 weeks','','','2025-02-25T01:00:00.000+0000','2025-02-24T23:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-5','2/26/2025: 3x/week 10 weeks','','','2025-02-27T01:00:00.000+0000','2025-02-26T23:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-6','2/28/2025: 3x/week 10 weeks','','','2025-03-01T01:00:00.000+0000','2025-02-28T23:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-7','3/3/2025: 3x/week 10 weeks','','','2025-03-04T01:00:00.000+0000','2025-03-03T23:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-8','3/5/2025: 3x/week 10 weeks','','','2025-03-06T01:00:00.000+0000','2025-03-05T23:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-9','3/7/2025: 3x/week 10 weeks','','','2025-03-08T01:00:00.000+0000','2025-03-07T23:00:00.000+0000','Complete','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-10','3/10/2025: 3x/week 10 weeks','','','2025-03-11T00:00:00.000+0000','2025-03-10T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-11','3/12/2025: 3x/week 10 weeks','','','2025-03-13T00:00:00.000+0000','2025-03-12T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-12','3/14/2025: 3x/week 10 weeks','','','2025-03-15T00:00:00.000+0000','2025-03-14T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-13','3/17/2025: 3x/week 10 weeks','','','2025-03-18T00:00:00.000+0000','2025-03-17T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-14','3/19/2025: 3x/week 10 weeks','','','2025-03-20T00:00:00.000+0000','2025-03-19T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-15','3/21/2025: 3x/week 10 weeks','','','2025-03-22T00:00:00.000+0000','2025-03-21T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-16','3/24/2025: 3x/week 10 weeks','','','2025-03-25T00:00:00.000+0000','2025-03-24T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-17','3/26/2025: 3x/week 10 weeks','','','2025-03-27T00:00:00.000+0000','2025-03-26T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-18','3/28/2025: 3x/week 10 weeks','','','2025-03-29T00:00:00.000+0000','2025-03-28T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-19','3/31/2025: 3x/week 10 weeks','','','2025-04-01T00:00:00.000+0000','2025-03-31T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-20','4/2/2025: 3x/week 10 weeks','','','2025-04-03T00:00:00.000+0000','2025-04-02T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-21','4/4/2025: 3x/week 10 weeks','','','2025-04-05T00:00:00.000+0000','2025-04-04T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-22','4/7/2025: 3x/week 10 weeks','','','2025-04-08T00:00:00.000+0000','2025-04-07T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-23','4/9/2025: 3x/week 10 weeks','','','2025-04-10T00:00:00.000+0000','2025-04-09T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-24','4/11/2025: 3x/week 10 weeks','','','2025-04-12T00:00:00.000+0000','2025-04-11T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-25','4/14/2025: 3x/week 10 weeks','','','2025-04-15T00:00:00.000+0000','2025-04-14T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-26','4/16/2025: 3x/week 10 weeks','','','2025-04-17T00:00:00.000+0000','2025-04-16T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-27','4/18/2025: 3x/week 10 weeks','','','2025-04-19T00:00:00.000+0000','2025-04-18T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-28','4/21/2025: 3x/week 10 weeks','','','2025-04-22T00:00:00.000+0000','2025-04-21T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-29','4/23/2025: 3x/week 10 weeks','','','2025-04-24T00:00:00.000+0000','2025-04-23T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-30','4/25/2025: 3x/week 10 weeks','','','2025-04-26T00:00:00.000+0000','2025-04-25T22:00:00.000+0000','Pending','','','','');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-31','2/17/2025: 3x per week, 10 weeks','','','2025-02-18T01:30:00.000+0000','2025-02-17T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-32','2/19/2025: 3x per week, 10 weeks','','','2025-02-20T01:30:00.000+0000','2025-02-19T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-33','2/21/2025: 3x per week, 10 weeks','','','2025-02-22T01:30:00.000+0000','2025-02-21T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-34','2/24/2025: 3x per week, 10 weeks','','','2025-02-25T01:30:00.000+0000','2025-02-24T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-35','2/26/2025: 3x per week, 10 weeks','','','2025-02-27T01:30:00.000+0000','2025-02-26T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-36','2/28/2025: 3x per week, 10 weeks','','','2025-03-01T01:30:00.000+0000','2025-02-28T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-37','3/3/2025: 3x per week, 10 weeks','','','2025-03-04T01:30:00.000+0000','2025-03-03T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-38','3/5/2025: 3x per week, 10 weeks','','','2025-03-06T01:30:00.000+0000','2025-03-05T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-39','3/7/2025: 3x per week, 10 weeks','','','2025-03-08T01:30:00.000+0000','2025-03-07T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-40','3/10/2025: 3x per week, 10 weeks','','','2025-03-11T00:30:00.000+0000','2025-03-10T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-41','3/12/2025: 3x per week, 10 weeks','','','2025-03-13T00:30:00.000+0000','2025-03-12T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-42','3/14/2025: 3x per week, 10 weeks','','','2025-03-15T00:30:00.000+0000','2025-03-14T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-43','3/17/2025: 3x per week, 10 weeks','','','2025-03-18T00:30:00.000+0000','2025-03-17T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-44','3/19/2025: 3x per week, 10 weeks','','','2025-03-20T00:30:00.000+0000','2025-03-19T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-45','3/21/2025: 3x per week, 10 weeks','','','2025-03-22T00:30:00.000+0000','2025-03-21T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-46','3/24/2025: 3x per week, 10 weeks','','','2025-03-25T00:30:00.000+0000','2025-03-24T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-47','3/26/2025: 3x per week, 10 weeks','','','2025-03-27T00:30:00.000+0000','2025-03-26T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-48','3/28/2025: 3x per week, 10 weeks','','','2025-03-29T00:30:00.000+0000','2025-03-28T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-49','3/31/2025: 3x per week, 10 weeks','','','2025-04-01T00:30:00.000+0000','2025-03-31T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-50','4/2/2025: 3x per week, 10 weeks','','','2025-04-03T00:30:00.000+0000','2025-04-02T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-51','4/4/2025: 3x per week, 10 weeks','','','2025-04-05T00:30:00.000+0000','2025-04-04T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-52','4/7/2025: 3x per week, 10 weeks','','','2025-04-08T00:30:00.000+0000','2025-04-07T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-53','4/9/2025: 3x per week, 10 weeks','','','2025-04-10T00:30:00.000+0000','2025-04-09T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-54','4/11/2025: 3x per week, 10 weeks','','','2025-04-12T00:30:00.000+0000','2025-04-11T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-55','4/14/2025: 3x per week, 10 weeks','','','2025-04-15T00:30:00.000+0000','2025-04-14T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-56','4/16/2025: 3x per week, 10 weeks','','','2025-04-17T00:30:00.000+0000','2025-04-16T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-57','4/18/2025: 3x per week, 10 weeks','','','2025-04-19T00:30:00.000+0000','2025-04-18T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-58','4/21/2025: 3x per week, 10 weeks','','','2025-04-22T00:30:00.000+0000','2025-04-21T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-59','4/23/2025: 3x per week, 10 weeks','','','2025-04-24T00:30:00.000+0000','2025-04-23T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-60','4/25/2025: 3x per week, 10 weeks','','','2025-04-26T00:30:00.000+0000','2025-04-25T22:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
 CREATE TABLE "pmdm__Service__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
