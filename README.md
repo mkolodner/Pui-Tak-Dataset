@@ -1,12 +1,7 @@
 # Pui-Tak-Dataset
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
+Repository holds a mapping and dataset for inserting data into sandboxes of Pui Tak Center using CumulusCI (CCI). See the flows in cumulusci.yml to clear and replace data.
 
-## Development
+In Visual Studio Code run: cci flow run ptc_cleandataset —org {orgalias}
 
-To work on this project in a scratch org:
-
-1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
-2. Run `cci flow run dev_org --org dev` to deploy this project.
-3. Run `cci org browser dev` to open the org in your browser.
+Scratch org creation is not supported with this repo, so using the cci commands like dev_org will not likely be successful. This repo is only intended for dataset use.
