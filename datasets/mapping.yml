@@ -117,10 +117,17 @@ Insert pmdm__Service__c:
   - pmdm__Description__c
   - pmdm__Status__c
   - pmdm__UnitOfMeasurement__c
+  - Location__c
+  - Curriculum__c
+  - Meeting_Code__c
+  - Units__c
   lookups:
     pmdm__Program__c:
       table:
       - pmdm__Program__c
+    Teacher__c:
+      table:
+      - Contact
 Insert Lead:
   sf_object: Lead
   fields:

@@ -53,6 +53,7 @@ INSERT INTO "Account" VALUES('Account-6','','','','','','','','','','','','','',
 INSERT INTO "Account" VALUES('Account-7','','','','','','','','','','','','','','Already Learnéd Household','012C0000000i2VQIAY','','','','','','','','','','Household','','','','True','Household Account','Already Learnéd','','Already','','','False','1.0','False','','','Contact-6');
 INSERT INTO "Account" VALUES('Account-8','','','','','','','','','','','','','','Eager Learner Household','012C0000000i2VQIAY','','','','','','','','','','Household','','','','True','Household Account','Eager Learner','','Eager','','','False','1.0','False','','','Contact-7');
 INSERT INTO "Account" VALUES('Account-9','','','','','','','','','','','','','','Dí ér Xuéshēng Household','012C0000000i2VQIAY','','','','','','','','','','Household','','','','True','Household Account','Dí ér Xuéshēng','','Dí ér','','','False','1.0','False','','','Contact-8');
+INSERT INTO "Account" VALUES('Account-10','','','','','','','','','','','','','','Generallynot Takingaclass Household','012C0000000i2VQIAY','','','','','','','','','','Household','','','','True','Household Account','Generallynot Takingaclass','','Generallynot','','','False','1.0','False','','','Contact-9');
 CREATE TABLE "Account_rt_mapping" (
 	record_type_id VARCHAR(18) NOT NULL, 
 	developer_name VARCHAR(255), 
@@ -619,6 +620,7 @@ INSERT INTO "Contact" VALUES('Contact-5','','','','','','False','False','False',
 INSERT INTO "Contact" VALUES('Contact-6','','','','','','False','False','False','China','','False','','','','','','Already','False','','','','','','','','Female','False','','Learnéd','','','False','','','','','','','','','','','','','','','','','False','','','','','','','','Asian','Prof.','','','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','One-to-One','False','','','','','','','All New or Edited Contacts','False','False','False','False','False','False','False','','','Account-7','','','','','','','','','','');
 INSERT INTO "Contact" VALUES('Contact-7','','','','','','False','False','False','China','','False','','','','','','Eager','False','','','','','','','','Female','False','','Learner','','','False','','','','','','','','','','','','','','','','','False','','','','','','','','Asian','Ms.','','','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','One-to-One','False','','','','','','','All New or Edited Contacts','False','False','False','False','False','False','False','','','Account-8','','','','','','','','','','');
 INSERT INTO "Contact" VALUES('Contact-8','','','','','','False','False','False','China','','False','','','','','','Dí ér','False','','','','','','','','','False','','Xuéshēng','','','False','','','','','','','','','','','','','','','','','False','','','','','','','','Asian','','','','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','One-to-One','False','','','','','','','All New or Edited Contacts','False','False','False','False','False','False','False','','','Account-9','','','','','','','','','','');
+INSERT INTO "Contact" VALUES('Contact-9','','','','','','False','False','False','China','','False','','','','','','Generallynot','False','','','','','','','','Female','False','','Takingaclass','','','False','','','','','','','','','','','','','','','','','False','','','','Donor - Actual/Possible;Program Participant','','','Mandarin','Asian','','','','','False','','False','','','','','False','','','','','','','','','','','False','','','','','Home','False','','','False','','','','','','','All New or Edited Contacts','False','False','False','False','False','False','False','','','Account-10','','','','','','','','','','');
 CREATE TABLE "Department__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
@@ -1400,6 +1402,13 @@ INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-25','','
 INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-26','','','','Eager Learner 2025-02-19: Class 1','','','False','2025-02-19','0.0','','','','Contact-7','pmdm__ProgramEngagement__c-7','','pmdm__Service__c-1');
 INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-27','','','','Eager Learner 2025-02-21: Class 1','','','False','2025-02-21','','','','','Contact-7','pmdm__ProgramEngagement__c-7','','pmdm__Service__c-1');
 INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-28','','','','Eager Learner 2025-03-07: Class 1','','','False','2025-03-07','','','','','Contact-7','pmdm__ProgramEngagement__c-7','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-29','','','','Already Learnéd 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-6','pmdm__ProgramEngagement__c-6','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-30','','','','Dritte Studentin 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-3','pmdm__ProgramEngagement__c-3','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-31','','','','Eager Learner 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-7','pmdm__ProgramEngagement__c-7','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-32','','','','Hamishat Talmida 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-2','pmdm__ProgramEngagement__c-2','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-33','','','','Michael Kolodner 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-4','pmdm__ProgramEngagement__c-4','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-34','','','','Rabi'' Talib 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-1','pmdm__ProgramEngagement__c-1','','pmdm__Service__c-1');
+INSERT INTO "pmdm__ServiceDelivery__c" VALUES('pmdm__ServiceDelivery__c-35','','','','Uno Estudiante 2025-02-17: Class 1','','','False','2025-02-17','1.0','','','','Contact-5','pmdm__ProgramEngagement__c-5','','pmdm__Service__c-1');
 CREATE TABLE "pmdm__ServiceParticipant__c" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
@@ -1495,7 +1504,7 @@ INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-27','4/18/
 INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-28','4/21/2025: 3x/week 10 weeks','','','2025-04-22T00:00:00.000+0000','2025-04-21T22:00:00.000+0000','Pending','','','','');
 INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-29','4/23/2025: 3x/week 10 weeks','','','2025-04-24T00:00:00.000+0000','2025-04-23T22:00:00.000+0000','Pending','','','','');
 INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-30','4/25/2025: 3x/week 10 weeks','','','2025-04-26T00:00:00.000+0000','2025-04-25T22:00:00.000+0000','Pending','','','','');
-INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-31','2/17/2025: 3x per week, 10 weeks','','','2025-02-18T01:30:00.000+0000','2025-02-17T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
+INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-31','2/17/2025: 3x per week, 10 weeks','','','2025-02-18T01:30:00.000+0000','2025-02-17T23:30:00.000+0000','Complete','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
 INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-32','2/19/2025: 3x per week, 10 weeks','','','2025-02-20T01:30:00.000+0000','2025-02-19T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
 INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-33','2/21/2025: 3x per week, 10 weeks','','','2025-02-22T01:30:00.000+0000','2025-02-21T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
 INSERT INTO "pmdm__ServiceSession__c" VALUES('pmdm__ServiceSession__c-34','2/24/2025: 3x per week, 10 weeks','','','2025-02-25T01:30:00.000+0000','2025-02-24T23:30:00.000+0000','Pending','pmdm__Service__c-1','','','pmdm__ServiceSchedule__c-1');
@@ -1534,8 +1543,13 @@ CREATE TABLE "pmdm__Service__c" (
 	"pmdm__Description__c" VARCHAR(255), 
 	"pmdm__Status__c" VARCHAR(255), 
 	"pmdm__UnitOfMeasurement__c" VARCHAR(255), 
+	"Location__c" VARCHAR(255), 
+	"Curriculum__c" VARCHAR(255), 
+	"Meeting_Code__c" VARCHAR(255), 
+	"Units__c" VARCHAR(255), 
 	"pmdm__Program__c" VARCHAR(255), 
+	"Teacher__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "pmdm__Service__c" VALUES('pmdm__Service__c-1','Class 1','','','','','Active','','pmdm__Program__c-1');
+INSERT INTO "pmdm__Service__c" VALUES('pmdm__Service__c-1','Class 1','','','Class','a test class record','Active','Hours','PTC','BE (ADV)','12304560789','Units 1-6','pmdm__Program__c-1','Contact-4');
 COMMIT;
