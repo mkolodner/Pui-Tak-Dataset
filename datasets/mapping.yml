@@ -117,6 +117,7 @@ Insert pmdm__Service__c:
   - pmdm__Description__c
   - pmdm__Status__c
   - pmdm__UnitOfMeasurement__c
+  - Book__c
   - Location__c
   - Curriculum__c
   - Meeting_Code__c
