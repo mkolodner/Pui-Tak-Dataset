@@ -107,29 +107,6 @@ Insert pmdm__ProgramCohort__c:
     pmdm__Program__c:
       table:
       - pmdm__Program__c
-Insert pmdm__Service__c:
-  sf_object: pmdm__Service__c
-  fields:
-  - Name
-  - Service_Date__c
-  - Service_Title__c
-  - Service_Type__c
-  - pmdm__Description__c
-  - pmdm__Status__c
-  - pmdm__UnitOfMeasurement__c
-  - Book__c
-  - Location__c
-  - Curriculum__c
-  - Meeting_Code__c
-  - Room__c
-  - Units__c
-  lookups:
-    pmdm__Program__c:
-      table:
-      - pmdm__Program__c
-    Teacher__c:
-      table:
-      - Contact
 Insert Lead:
   sf_object: Lead
   fields:
@@ -1532,40 +1509,6 @@ Insert Story__c:
     Program__c:
       table:
       - pmdm__Program__c
-Insert pmdm__ServiceDelivery__c:
-  sf_object: pmdm__ServiceDelivery__c
-  fields:
-  - Date_of_Service__c
-  - End_Time__c
-  - Financial_Benefit__c
-  - Name
-  - Notes__c
-  - Start_Time__c
-  - pmdm__AutonameOverride__c
-  - pmdm__DeliveryDate__c
-  - pmdm__Quantity__c
-  lookups:
-    Birdseye_Event__c:
-      table:
-      - Birdseye_Event__c
-    Case__c:
-      table:
-      - Case
-    pmdm__Account__c:
-      table:
-      - Account
-    pmdm__Contact__c:
-      table:
-      - Contact
-    pmdm__ProgramEngagement__c:
-      table:
-      - pmdm__ProgramEngagement__c
-    pmdm__Service_Provider__c:
-      table:
-      - Contact
-    pmdm__Service__c:
-      table:
-      - pmdm__Service__c
 Insert caseman__ClientNote__c:
   sf_object: caseman__ClientNote__c
   fields:
@@ -1588,6 +1531,29 @@ Insert caseman__ClientNote__c:
     caseman__ProgramEngagement__c:
       table:
       - pmdm__ProgramEngagement__c
+Insert pmdm__Service__c:
+  sf_object: pmdm__Service__c
+  fields:
+  - Name
+  - Service_Date__c
+  - Service_Title__c
+  - Service_Type__c
+  - pmdm__Description__c
+  - pmdm__Status__c
+  - pmdm__UnitOfMeasurement__c
+  - Book__c
+  - Location__c
+  - Curriculum__c
+  - Meeting_Code__c
+  - Room__c
+  - Units__c
+  lookups:
+    pmdm__Program__c:
+      table:
+      - pmdm__Program__c
+    Teacher__c:
+      table:
+      - Contact
 Insert pmdm__ServiceSchedule__c:
   sf_object: pmdm__ServiceSchedule__c
   fields:
@@ -1659,3 +1625,37 @@ Insert pmdm__ServiceSession__c:
     pmdm__ServiceSchedule__c:
       table:
       - pmdm__ServiceSchedule__c
+Insert pmdm__ServiceDelivery__c:
+  sf_object: pmdm__ServiceDelivery__c
+  fields:
+  - Date_of_Service__c
+  - End_Time__c
+  - Financial_Benefit__c
+  - Name
+  - Notes__c
+  - Start_Time__c
+  - pmdm__AutonameOverride__c
+  - pmdm__DeliveryDate__c
+  - pmdm__Quantity__c
+  lookups:
+    Birdseye_Event__c:
+      table:
+      - Birdseye_Event__c
+    Case__c:
+      table:
+      - Case
+    pmdm__Account__c:
+      table:
+      - Account
+    pmdm__Contact__c:
+      table:
+      - Contact
+    pmdm__ProgramEngagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+    pmdm__Service_Provider__c:
+      table:
+      - Contact
+    pmdm__Service__c:
+      table:
+      - pmdm__Service__c
