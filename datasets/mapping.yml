@@ -1542,6 +1542,7 @@ Insert pmdm__Service__c:
   - pmdm__Status__c
   - pmdm__UnitOfMeasurement__c
   - Book__c
+  - DAISI_Class_Name__c
   - Location__c
   - Curriculum__c
   - Meeting_Code__c
