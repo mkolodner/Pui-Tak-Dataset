@@ -120,6 +120,7 @@ Insert pmdm__Service__c:
   - Location__c
   - Curriculum__c
   - Meeting_Code__c
+  - Room__c
   - Units__c
   lookups:
     pmdm__Program__c:

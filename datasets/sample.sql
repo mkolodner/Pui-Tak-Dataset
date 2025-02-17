@@ -1626,10 +1626,11 @@ CREATE TABLE "pmdm__Service__c" (
 	"Location__c" VARCHAR(255), 
 	"Curriculum__c" VARCHAR(255), 
 	"Meeting_Code__c" VARCHAR(255), 
+	"Room__c" VARCHAR(255), 
 	"Units__c" VARCHAR(255), 
 	"pmdm__Program__c" VARCHAR(255), 
 	"Teacher__c" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "pmdm__Service__c" VALUES('pmdm__Service__c-1','Class 1','','','Class','a test class record','Active','Hours','PTC','BE (ADV)','12304560789','Units 1-6','pmdm__Program__c-1','Contact-4');
+INSERT INTO "pmdm__Service__c" VALUES('pmdm__Service__c-1','Class 1','','','Class','a test class record','Active','Hours','PTC','BE (ADV)','12304560789','PTC Room 203 室 培德中心 (二楼)','Units 1-6','pmdm__Program__c-1','Contact-4');
 COMMIT;
