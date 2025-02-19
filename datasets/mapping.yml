@@ -1559,6 +1559,13 @@ Insert pmdm__ServiceSchedule__c:
   sf_object: pmdm__ServiceSchedule__c
   fields:
   - Name
+  - Book__c
+  - Curriculum__c
+  - DAISI_Class_Name__c
+  - Location__c
+  - Meeting_Code__c
+  - Room__c
+  - Units__c
   - pmdm__AllDay__c
   - pmdm__CreateServiceSessionRecords__c
   - pmdm__DaysOfWeek__c
@@ -1614,9 +1621,6 @@ Insert pmdm__ServiceSession__c:
   - pmdm__SessionStart__c
   - pmdm__Status__c
   lookups:
-    Service__c:
-      table:
-      - pmdm__Service__c
     pmdm__OtherServiceProvider__c:
       table:
       - Contact
