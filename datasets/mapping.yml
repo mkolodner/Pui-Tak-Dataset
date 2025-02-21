@@ -1557,6 +1557,7 @@ Insert pmdm__ServiceSchedule__c:
   - Meeting_Code__c
   - Room__c
   - Term__c
+  - Time_of_Day__c
   - Units__c
   - pmdm__AllDay__c
   - pmdm__CreateServiceSessionRecords__c
