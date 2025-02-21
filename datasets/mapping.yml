@@ -1552,9 +1552,11 @@ Insert pmdm__ServiceSchedule__c:
   - Book__c
   - Curriculum__c
   - DAISI_Class_Name__c
+  - Fiscal_Year__c
   - Location__c
   - Meeting_Code__c
   - Room__c
+  - Term__c
   - Units__c
   - pmdm__AllDay__c
   - pmdm__CreateServiceSessionRecords__c
