@@ -1630,6 +1630,7 @@ Insert pmdm__ServiceDelivery__c:
   - Notes__c
   - Start_Time__c
   - pmdm__AutonameOverride__c
+  - pmdm__AttendanceStatus__c
   - pmdm__DeliveryDate__c
   - pmdm__Quantity__c
   lookups:
@@ -1654,3 +1655,6 @@ Insert pmdm__ServiceDelivery__c:
     pmdm__Service__c:
       table:
       - pmdm__Service__c
+    pmdm__ServiceSession__c:
+      table:
+      - pmdm__ServiceSession__c
