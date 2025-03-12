@@ -1553,6 +1553,7 @@ Insert pmdm__ServiceSchedule__c:
   - Curriculum__c
   - DAISI_Class_Name__c
   - Fiscal_Year__c
+  - Funding_Source__c
   - Location__c
   - Meeting_Code__c
   - Note__c
@@ -1610,6 +1611,12 @@ Insert pmdm__ServiceSession__c:
   fields:
   - Name
   - Note__c
+  - X1st_Digital_Literacy_Competency__c
+  - X1st_EL_Civics_Competency__c
+  - X1st_Workforce_Competency__c
+  - X2nd_Digital_Literacy_Competency__c
+  - X2nd_EL_Civics_Competency__c
+  - X2nd_Workforce_Competency__c
   - pmdm__NumAbsentServiceDeliveries__c
   - pmdm__NumPresentServiceDeliveries__c
   - pmdm__SessionEnd__c
