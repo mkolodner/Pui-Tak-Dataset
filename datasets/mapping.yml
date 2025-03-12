@@ -1555,6 +1555,7 @@ Insert pmdm__ServiceSchedule__c:
   - Fiscal_Year__c
   - Location__c
   - Meeting_Code__c
+  - Note__c
   - Room__c
   - Term__c
   - Time_of_Day__c
@@ -1608,6 +1609,7 @@ Insert pmdm__ServiceSession__c:
   sf_object: pmdm__ServiceSession__c
   fields:
   - Name
+  - Note__c
   - pmdm__NumAbsentServiceDeliveries__c
   - pmdm__NumPresentServiceDeliveries__c
   - pmdm__SessionEnd__c
