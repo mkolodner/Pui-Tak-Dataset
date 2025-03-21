@@ -1593,6 +1593,7 @@ Insert pmdm__ServiceParticipant__c:
   - Name
   - pmdm__SignUpDate__c
   - pmdm__Status__c
+  - Exit_Code__c
   lookups:
     pmdm__Contact__c:
       table:
