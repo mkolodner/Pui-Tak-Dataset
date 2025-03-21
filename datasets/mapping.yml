@@ -1670,3 +1670,6 @@ Insert pmdm__ServiceDelivery__c:
     pmdm__ServiceSession__c:
       table:
       - pmdm__ServiceSession__c
+    Service_Participant__c:
+      table:
+      - pmdm__ServiceParticipant__c
