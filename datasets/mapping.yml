@@ -739,6 +739,7 @@ Insert Contact:
   - Race_Ethnicity__c
   - Salutation
   - SSN_last_4_digits__c
+  - Student_Id__c
   - Social_Security_Number__c
   - Title
   - Volunteer_Application_Received__c
