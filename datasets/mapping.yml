@@ -693,9 +693,6 @@ Insert Contact:
   - DoNotCall
   - Email
   - Email_notes__c
-  - Emergency_Address__c
-  - Emergency_Relationship__c
-  - Emergency_Telephone__c
   - FirstName
   - GW_Volunteers__Volunteer_Auto_Reminder_Email_Opt_Out__c
   - GW_Volunteers__Volunteer_Availability__c
@@ -739,7 +736,6 @@ Insert Contact:
   - Race_Ethnicity__c
   - Salutation
   - SSN_last_4_digits__c
-  - Student_Id__c
   - Social_Security_Number__c
   - Title
   - Volunteer_Application_Received__c
