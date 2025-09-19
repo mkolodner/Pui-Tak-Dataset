@@ -1258,9 +1258,6 @@ Insert pmdm__ServiceDelivery__c:
     Birdseye_Event__c:
       table:
       - Birdseye_Event__c
-    Case__c:
-      table:
-      - Case
     Service_Participant__c:
       table:
       - pmdm__ServiceParticipant__c
