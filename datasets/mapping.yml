@@ -1234,6 +1234,106 @@ Insert pmdm__Service__c:
     pmdm__Program__c:
       table:
       - pmdm__Program__c
+Insert pmdm__ServiceDelivery__c:
+  sf_object: pmdm__ServiceDelivery__c
+  fields:
+  - Absence_Streak__c
+  - Age_at_Time_of_Service__c
+  - DAISI_Code__c
+  - Danger_of_Attrition__c
+  - Date_of_Service__c
+  - Duration__c
+  - End_Time__c
+  - Exit_Code__c
+  - Financial_Benefit__c
+  - Name
+  - Note__c
+  - Notes__c
+  - Start_Time__c
+  - pmdm__AttendanceStatus__c
+  - pmdm__AutonameOverride__c
+  - pmdm__DeliveryDate__c
+  - pmdm__Quantity__c
+  lookups:
+    Birdseye_Event__c:
+      table:
+      - Birdseye_Event__c
+    Case__c:
+      table:
+      - Case
+    Service_Participant__c:
+      table:
+      - pmdm__ServiceParticipant__c
+      after: Insert pmdm__ServiceParticipant__c
+    pmdm__Account__c:
+      table:
+      - Account
+    pmdm__Contact__c:
+      table:
+      - Contact
+    pmdm__ProgramEngagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+    pmdm__ServiceSession__c:
+      table:
+      - pmdm__ServiceSession__c
+      after: Insert pmdm__ServiceSession__c
+    pmdm__Service_Provider__c:
+      table:
+      - Contact
+    pmdm__Service__c:
+      table:
+      - pmdm__Service__c
+Insert Competency_Delivery__c:
+  sf_object: Competency_Delivery__c
+  fields:
+  - Competency__c
+  - Unique_Id__c
+  lookups:
+    Service_Delivery__c:
+      table:
+      - pmdm__ServiceDelivery__c
+Insert pmdm__ServiceParticipant__c:
+  sf_object: pmdm__ServiceParticipant__c
+  fields:
+  - Class_Assignment_Notification_Date__c
+  - Class_Assignment_for_Next_Term__c
+  - Cloned_into_next_term__c
+  - DLRS_Attendance_Hours__c
+  - DLRS_Attendances_Absent_Streak_3__c
+  - DLRS_Attendances_Absent_Streak_6__c
+  - Name
+  - New_Class_Comment__c
+  - New_Class_Curriculum__c
+  - New_Class_Location__c
+  - New_Class_Time__c
+  - Onward_Assignment_Code__c
+  - Student_Notes__c
+  - Transfer_Need_Notes__c
+  - Transfer_Request__c
+  - pmdm__SignUpDate__c
+  - pmdm__Status__c
+  lookups:
+    DLRS_First_Attendance__c:
+      table:
+      - pmdm__ServiceDelivery__c
+    Onward_Assignment__c:
+      table:
+      - pmdm__ServiceSchedule__c
+      after: Insert pmdm__ServiceSchedule__c
+    pmdm__Contact__c:
+      table:
+      - Contact
+    pmdm__ProgramEngagement__c:
+      table:
+      - pmdm__ProgramEngagement__c
+    pmdm__ServiceSchedule__c:
+      table:
+      - pmdm__ServiceSchedule__c
+      after: Insert pmdm__ServiceSchedule__c
+    pmdm__Service__c:
+      table:
+      - pmdm__Service__c
 Insert pmdm__ServiceSchedule__c:
   sf_object: pmdm__ServiceSchedule__c
   fields:
@@ -1242,6 +1342,7 @@ Insert pmdm__ServiceSchedule__c:
   - Class_Schedule__c
   - Curriculum__c
   - DAISI_Class_Name__c
+  - DEPRECATEClass_Schedule__c
   - Fiscal_Year__c
   - Funding_Source__c
   - Location__c
@@ -1272,6 +1373,17 @@ Insert pmdm__ServiceSchedule__c:
   - pmdm__ServiceScheduleEndDate__c
   - pmdm__ServiceScheduleEnds__c
   lookups:
+    DLRS_First_Session__c:
+      table:
+      - pmdm__ServiceSession__c
+      after: Insert pmdm__ServiceSession__c
+    DLRS_Last_Session__c:
+      table:
+      - pmdm__ServiceSession__c
+      after: Insert pmdm__ServiceSession__c
+    Term_Lookup__c:
+      table:
+      - Term__c
     pmdm__OtherServiceProvider__c:
       table:
       - Contact
@@ -1281,45 +1393,19 @@ Insert pmdm__ServiceSchedule__c:
     pmdm__Service__c:
       table:
       - pmdm__Service__c
-    Term_Lookup__c:
-      table:
-      - Term__c
-Insert pmdm__ServiceParticipant__c:
-  sf_object: pmdm__ServiceParticipant__c
-  fields:
-  - Class_Assignment_Notification_Date__c
-  - Class_Assignment_for_Next_Term__c
-  - Cloned_into_next_term__c
-  - Name
-  - New_Class_Comment__c
-  - New_Class_Curriculum__c
-  - New_Class_Location__c
-  - New_Class_Time__c
-  - Onward_Assignment_Code__c
-  - Student_Notes__c
-  - Transfer_Need_Notes__c
-  - Transfer_Request__c
-  - pmdm__SignUpDate__c
-  - pmdm__Status__c
-  lookups:
-    pmdm__Contact__c:
-      table:
-      - Contact
-    pmdm__ProgramEngagement__c:
-      table:
-      - pmdm__ProgramEngagement__c
-    pmdm__ServiceSchedule__c:
-      table:
-      - pmdm__ServiceSchedule__c
-      after: Insert pmdm__ServiceSchedule__c
-    pmdm__Service__c:
-      table:
-      - pmdm__Service__c
 Insert pmdm__ServiceSession__c:
   sf_object: pmdm__ServiceSession__c
   fields:
+  - Attendance_Entered_in_DAISI__c
+  - DLRS_Students_Absent_Streak_6__c
+  - DLRS_Students_in_Danger_of_Attrition__c
+  - Last_session_of_class__c
   - Name
   - Note__c
+  - Sub_Resched_Reason_for_Absence__c
+  - Sub_Resched_Requested_Makeup_Date__c
+  - Sub_Resched_Substitute_Teacher__c
+  - Sub_Resched_Type__c
   - X1st_Digital_Literacy_Competency__c
   - X1st_EL_Civics_Competency__c
   - X1st_Workforce_Competency__c
@@ -1328,6 +1414,7 @@ Insert pmdm__ServiceSession__c:
   - X2nd_Workforce_Competency__c
   - pmdm__NumAbsentServiceDeliveries__c
   - pmdm__NumPresentServiceDeliveries__c
+  - pmdm__OmittedContactIds__c
   - pmdm__SessionEnd__c
   - pmdm__SessionStart__c
   - pmdm__Status__c
@@ -1341,38 +1428,3 @@ Insert pmdm__ServiceSession__c:
     pmdm__ServiceSchedule__c:
       table:
       - pmdm__ServiceSchedule__c
-Insert pmdm__ServiceDelivery__c:
-  sf_object: pmdm__ServiceDelivery__c
-  fields:
-  - Date_of_Service__c
-  - End_Time__c
-  - Financial_Benefit__c
-  - Name
-  - Notes__c
-  - Start_Time__c
-  - pmdm__AutonameOverride__c
-  - pmdm__AttendanceStatus__c
-  - pmdm__DeliveryDate__c
-  - pmdm__Quantity__c
-  lookups:
-    Birdseye_Event__c:
-      table:
-      - Birdseye_Event__c
-    pmdm__Account__c:
-      table:
-      - Account
-    pmdm__Contact__c:
-      table:
-      - Contact
-    pmdm__ProgramEngagement__c:
-      table:
-      - pmdm__ProgramEngagement__c
-    pmdm__Service_Provider__c:
-      table:
-      - Contact
-    pmdm__Service__c:
-      table:
-      - pmdm__Service__c
-    pmdm__ServiceSession__c:
-      table:
-      - pmdm__ServiceSession__c
