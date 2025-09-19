@@ -35,6 +35,14 @@ Insert Report_Batch__c:
   sf_object: Report_Batch__c
   fields:
   - Name
+Insert Term__c:
+  sf_object: Term__c
+  fields:
+  - End_Date__c
+  - Fiscal_Year__c
+  - Name
+  - Start_Date__c
+  - Term_Number__c
 Insert Route__c:
   sf_object: Route__c
   fields:
@@ -1545,18 +1553,23 @@ Insert pmdm__Service__c:
 Insert pmdm__ServiceSchedule__c:
   sf_object: pmdm__ServiceSchedule__c
   fields:
-  - Name
   - Book__c
+  - Class_Code__c
+  - Class_Schedule__c
   - Curriculum__c
   - DAISI_Class_Name__c
   - Fiscal_Year__c
   - Funding_Source__c
   - Location__c
   - Meeting_Code__c
+  - Name
   - Note__c
   - Room__c
   - Term__c
   - Time_of_Day__c
+  - Tutoring_Day__c
+  - Tutoring_Level__c
+  - Tutoring_Time__c
   - Units__c
   - pmdm__AllDay__c
   - pmdm__CreateServiceSessionRecords__c
@@ -1584,13 +1597,37 @@ Insert pmdm__ServiceSchedule__c:
     pmdm__Service__c:
       table:
       - pmdm__Service__c
+    Term_Lookup__c:
+      table:
+      - Term__c
 Insert pmdm__ServiceParticipant__c:
   sf_object: pmdm__ServiceParticipant__c
   fields:
+  - Class_Assignment_Notification_Date__c
+  - Class_Assignment_for_Next_Term__c
+  - Cloned_into_next_term__c
+  - DLRS_Attendance_Hours__c
+  - DLRS_Attendances_Absent_Streak_3__c
+  - DLRS_Attendances_Absent_Streak_6__c
   - Name
+  - New_Class_Comment__c
+  - New_Class_Curriculum__c
+  - New_Class_Location__c
+  - New_Class_Time__c
+  - Onward_Assignment_Code__c
+  - Student_Notes__c
+  - Transfer_Need_Notes__c
+  - Transfer_Request__c
   - pmdm__SignUpDate__c
   - pmdm__Status__c
   lookups:
+    DLRS_First_Attendance__c:
+      table:
+      - pmdm__ServiceDelivery__c
+    Onward_Assignment__c:
+      table:
+      - pmdm__ServiceSchedule__c
+      after: Insert pmdm__ServiceSchedule__c
     pmdm__Contact__c:
       table:
       - Contact
@@ -1600,6 +1637,7 @@ Insert pmdm__ServiceParticipant__c:
     pmdm__ServiceSchedule__c:
       table:
       - pmdm__ServiceSchedule__c
+      after: Insert pmdm__ServiceSchedule__c
     pmdm__Service__c:
       table:
       - pmdm__Service__c
