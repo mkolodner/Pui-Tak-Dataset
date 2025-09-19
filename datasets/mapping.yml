@@ -10,14 +10,6 @@ Insert Campaign:
       table:
       - Campaign
       after: Insert Campaign
-Insert Department__c:
-  sf_object: Department__c
-  fields:
-  - Name
-Insert Deposit__c:
-  sf_object: Deposit__c
-  fields:
-  - Name
 Insert Fiscal_Year__c:
   sf_object: Fiscal_Year__c
   fields:
@@ -43,20 +35,8 @@ Insert Term__c:
   - Name
   - Start_Date__c
   - Term_Number__c
-Insert Route__c:
-  sf_object: Route__c
-  fields:
-  - Name
 Insert Service_Cost__c:
   sf_object: Service_Cost__c
-  fields:
-  - Name
-Insert Stop_Status__c:
-  sf_object: Stop_Status__c
-  fields:
-  - Name
-Insert Time_Period__c:
-  sf_object: Time_Period__c
   fields:
   - Name
 Insert Vehicle__c:
@@ -95,14 +75,6 @@ Insert GW_Volunteers__Volunteer_Job__c:
     GW_Volunteers__Campaign__c:
       table:
       - Campaign
-Insert Program__c:
-  sf_object: Program__c
-  fields:
-  - Name
-  lookups:
-    Department_del__c:
-      table:
-      - Department__c
 Insert pmdm__ProgramCohort__c:
   sf_object: pmdm__ProgramCohort__c
   fields:
@@ -187,23 +159,6 @@ Insert Account:
       table:
       - Contact
       after: Insert Contact
-Insert Enrollment_Summary__c:
-  sf_object: Enrollment_Summary__c
-  fields:
-  - Check_Date__c
-  - Check_Number__c
-  - Name
-  - Payment_Date__c
-  - Payment_Type__c
-  - Total_Refunds_for_All_EnrollmentsTrg__c
-  - Total_for_All_EnrollmentsTrg__c
-  lookups:
-    Account__c:
-      table:
-      - Account
-    Fee_Deposit__c:
-      table:
-      - Deposit__c
 Insert npsp__Address__c:
   sf_object: npsp__Address__c
   fields:
@@ -233,56 +188,6 @@ Insert npsp__Address__c:
     npsp__Household_Account__c:
       table:
       - Account
-Insert Authorization__c:
-  sf_object: Authorization__c
-  fields:
-  - Authorization_Number__c
-  - Authorization_Status__c
-  - Authorized_Units__c
-  - Auto_Renew_Until_Date__c
-  - CCU__c
-  - Case_Manager_Email__c
-  - Case_Manager_Phone__c
-  - Case_Manager__c
-  - Client_Member_I_D__c
-  - Cost_Per_Unit__c
-  - DON_Score__c
-  - Diagnosis__c
-  - End_Date__c
-  - Frequency_Authorized_Units__c
-  - Frequency__c
-  - Lost_Units__c
-  - MCO_Contact__c
-  - MCO_Member_ID__c
-  - MCO__c
-  - MMSE_Score__c
-  - Medicare_Recipient__c
-  - Name
-  - Notes__c
-  - Reassessment_Date__c
-  - Service_Description__c
-  - Spend_Rate__c
-  - Start_Date__c
-  - Unit_Type__c
-  lookups:
-    Contact__c:
-      table:
-      - Contact
-      after: Insert Contact
-    Funding_Source_Contact__c:
-      table:
-      - Contact
-      after: Insert Contact
-    Funding_Source__c:
-      table:
-      - Account
-    Program_Engagement__c:
-      table:
-      - pmdm__ProgramEngagement__c
-      after: Insert pmdm__ProgramEngagement__c
-    Service_Cost__c:
-      table:
-      - Service_Cost__c
 Insert Billing_Entry__c:
   sf_object: Billing_Entry__c
   fields:
@@ -377,12 +282,6 @@ Insert Billing_Entry__c:
   - Walk_with_Aid__c
   - Write_Checks__c
   lookups:
-    AM_Route__c:
-      table:
-      - Route__c
-    Authorization__c:
-      table:
-      - Authorization__c
     Contact__c:
       table:
       - Contact
@@ -391,16 +290,10 @@ Insert Billing_Entry__c:
       table:
       - Master_Schedule__c
       after: Insert Master_Schedule__c
-    PM_Route__c:
-      table:
-      - Route__c
     Program_Engagement__c:
       table:
       - pmdm__ProgramEngagement__c
       after: Insert pmdm__ProgramEngagement__c
-    Trans_Authorization__c:
-      table:
-      - Authorization__c
 Insert Birdseye_Event__c:
   sf_object: Birdseye_Event__c
   fields:
@@ -430,76 +323,6 @@ Insert Birdseye_Event__c:
     Program__c:
       table:
       - pmdm__Program__c
-Insert Case:
-  sf_object: Case
-  fields:
-  - Assessment_Barrier__c
-  - Case_Age_In_Business_Hours__c
-  - Case_Closed_Date__c
-  - Case_Open_Date__c
-  - Case_Outcome__c
-  - Case_Worker__c
-  - Charity_Tracker_Assistance__c
-  - First_Case_in_FY__c
-  - IsEscalated
-  - Last_Status_Change__c
-  - Number_in_Household__c
-  - RecordTypeId
-  - Service_Requested_CM__c
-  - Service_Requested__c
-  - Time_Used_on_Case__c
-  - Time_With_Customer__c
-  - Time_With_Support__c
-  - Type_Sub_Category__c
-  - caseman__IncidentDateTime__c
-  - caseman__IncidentType__c
-  - caseman__LocationNotes__c
-  - caseman__ReferralResult__c
-  - caseman__Severity__c
-  lookups:
-    AccountId:
-      table:
-      - Account
-    ContactId:
-      table:
-      - Contact
-      after: Insert Contact
-    ParentId:
-      table:
-      - Case
-      after: Insert Case
-    Service_Delivery_del__c:
-      table:
-      - pmdm__ServiceDelivery__c
-      after: Insert pmdm__ServiceDelivery__c
-    caseman__Branch__c:
-      table:
-      - Account
-    caseman__Intake__c:
-      table:
-      - caseman__Intake__c
-      after: Insert caseman__Intake__c
-    caseman__Program__c:
-      table:
-      - pmdm__Program__c
-    caseman__ReferralOrganizationContact__c:
-      table:
-      - Contact
-      after: Insert Contact
-    caseman__ReferralOrganization__c:
-      table:
-      - Account
-Insert Case_Followup__c:
-  sf_object: Case_Followup__c
-  fields:
-  - Case_Followup_Date__c
-  - Case_Followup_Notes__c
-  - Case_Followup_Status__c
-  - Name
-  lookups:
-    Case__c:
-      table:
-      - Case
 Insert Class_Session__c:
   sf_object: Class_Session__c
   fields:
@@ -558,15 +381,9 @@ Insert Class__c:
       table:
       - Contact
       after: Insert Contact
-    Program__c:
-      table:
-      - Program__c
     Programm__c:
       table:
       - pmdm__Program__c
-    Time_Period__c:
-      table:
-      - Time_Period__c
 Insert Class_Roster__c:
   sf_object: Class_Roster__c
   fields:
@@ -626,9 +443,6 @@ Insert Class_Roster__c:
       table:
       - Contact
       after: Insert Contact
-    Enrollment_Summary_and_Payment__c:
-      table:
-      - Enrollment_Summary__c
     Parent_1__c:
       table:
       - Contact
@@ -806,16 +620,10 @@ Insert Contact:
       table:
       - Background_Check__c
       after: Insert Background_Check__c
-    Current_In_Home_Authorization__c:
-      table:
-      - Authorization__c
     Current_Intake__c:
       table:
       - Intake__c
       after: Insert Intake__c
-    Current_Transportation_Auth__c:
-      table:
-      - Authorization__c
     ReportsToId:
       table:
       - Contact
@@ -1052,62 +860,6 @@ Insert Referral__c:
     Third_Party__c:
       table:
       - Account
-Insert Rental_Utility_Assistance__c:
-  sf_object: Rental_Utility_Assistance__c
-  fields:
-  - Amount_of_Payment__c
-  - Application_Date__c
-  - Check_Date__c
-  - Check_Number__c
-  - Client_Consent_completed__c
-  - Date_Issued_to_Payee__c
-  - Date_Range_Covered_End__c
-  - Date_Range_Covered_Start__c
-  - Federal_Stimulus__c
-  - Financial_Assistance_Provided__c
-  - Financial_Eligibility__c
-  - Household_Income__c
-  - Household_Size__c
-  - Landlord_City__c
-  - Landlord_Email__c
-  - Landlord_Name__c
-  - Landlord_Phone__c
-  - Landlord_State__c
-  - Landlord_Street__c
-  - Landlord_Zip__c
-  - Landlord_cooperation_efforts__c
-  - Landlord_not_responsive_note__c
-  - Monthly_Rent_Amount__c
-  - Months_of_Rental_Assistance_Requested__c
-  - Months_of_Utility_Assistance_Requested__c
-  - Name
-  - Other_Rental_Assistance__c
-  - Outstanding_Rent_Amount__c
-  - Outstanding_Utility_Amount__c
-  - Payee_Address__c
-  - Payee_City__c
-  - Payee_Name__c
-  - Payee_State__c
-  - Payee_Type__c
-  - Payee_Zip__c
-  - Prior_Rental_Assistance__c
-  - Proof_notes__c
-  - Proof_of_Address__c
-  - Proof_of_Financial_Hardship__c
-  - Proof_of_Identity__c
-  - Proof_of_Income__c
-  - Rental_Assistance_Requested__c
-  - Requested_Amount_Comments__c
-  - Status__c
-  - Utility_Assistance_Requested__c
-  - Utility_Type__c
-  lookups:
-    Case__c:
-      table:
-      - Case
-    Contact__c:
-      table:
-      - Contact
 Insert SFDC_Class__c:
   sf_object: SFDC_Class__c
   fields:
@@ -1141,12 +893,6 @@ Insert SFDC_Class__c:
     Fiscal_Year__c:
       table:
       - Fiscal_Year__c
-    Program__c:
-      table:
-      - Program__c
-    Time_Period__c:
-      table:
-      - Time_Period__c
 Insert caseman__Intake__c:
   sf_object: caseman__Intake__c
   fields:
@@ -1375,9 +1121,6 @@ Insert Opportunity:
     ContactId:
       table:
       - Contact
-    Deposit__c:
-      table:
-      - Deposit__c
     npe03__Recurring_Donation__c:
       table:
       - npe03__Recurring_Donation__c
@@ -1385,65 +1128,6 @@ Insert Opportunity:
       table:
       - Opportunity
       after: Insert Opportunity
-Insert SFDC_Enrollment__c:
-  sf_object: SFDC_Enrollment__c
-  fields:
-  - Allergen_Online_instructor__c
-  - Allergen_Online_self__c
-  - Amount_Paid__c
-  - CPDH_Manager_License__c
-  - Enrollment_Date__c
-  - Enrollment_Notes__c
-  - Fee_Discount_Reason__c
-  - Fee_Discount__c
-  - Fee_Other__c
-  - Follow_up_Items__c
-  - Follow_up_Items_del__c
-  - Food_Handler_Online_instructor__c
-  - Food_Handler_Online_self__c
-  - Grade_in_School__c
-  - Manager_Book_buy__c
-  - Manager_Book_loan__c
-  - Manager_Class__c
-  - Manager_Exam_only__c
-  - Manager_Re_Test_fee__c
-  - Manager_Replacement_License__c
-  - Music_Sessions__c
-  - Other_Payee__c
-  - Outdoor_Vendor__c
-  - Pay_To_Parent_Other__c
-  - RecordTypeId
-  - Refund_Amount__c
-  - Refund_Check_Date__c
-  - Refund_Check_Number__c
-  - Refund_Reason__c
-  - Sanitation_Student_Type__c
-  - School__c
-  - Status__c
-  - T_shirt_Size__c
-  - Total_Due_for_Enrollee_currency__c
-  lookups:
-    Class__c:
-      table:
-      - SFDC_Class__c
-    Contact__c:
-      table:
-      - Contact
-    Doctor__c:
-      table:
-      - Account
-    Emergency_Contact__c:
-      table:
-      - Contact
-    Enrollment_Summary__c:
-      table:
-      - Enrollment_Summary__c
-    Parent_1__c:
-      table:
-      - Contact
-    Parent_2__c:
-      table:
-      - Contact
 Insert Scheduled_Visit__c:
   sf_object: Scheduled_Visit__c
   fields:
@@ -1606,9 +1290,6 @@ Insert pmdm__ServiceParticipant__c:
   - Class_Assignment_Notification_Date__c
   - Class_Assignment_for_Next_Term__c
   - Cloned_into_next_term__c
-  - DLRS_Attendance_Hours__c
-  - DLRS_Attendances_Absent_Streak_3__c
-  - DLRS_Attendances_Absent_Streak_6__c
   - Name
   - New_Class_Comment__c
   - New_Class_Curriculum__c
@@ -1621,13 +1302,6 @@ Insert pmdm__ServiceParticipant__c:
   - pmdm__SignUpDate__c
   - pmdm__Status__c
   lookups:
-    DLRS_First_Attendance__c:
-      table:
-      - pmdm__ServiceDelivery__c
-    Onward_Assignment__c:
-      table:
-      - pmdm__ServiceSchedule__c
-      after: Insert pmdm__ServiceSchedule__c
     pmdm__Contact__c:
       table:
       - Contact
@@ -1684,9 +1358,6 @@ Insert pmdm__ServiceDelivery__c:
     Birdseye_Event__c:
       table:
       - Birdseye_Event__c
-    Case__c:
-      table:
-      - Case
     pmdm__Account__c:
       table:
       - Account
