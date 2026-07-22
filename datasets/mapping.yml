@@ -1167,6 +1167,10 @@ Insert pmdm__ProgramEngagement__c:
     pmdm__ProgramCohort__c:
       table:
       - pmdm__ProgramCohort__c
+    Tutor__c:
+      table:
+      - pmdm__ProgramEngagement__c
+      after: Insert pmdm__ProgramEngagement__c
     pmdm__Program__c:
       table:
       - pmdm__Program__c
